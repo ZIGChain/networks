@@ -27,7 +27,7 @@ The configuration details in this repository can be used to automate deployment 
 All network data is structured consistently, allowing you to fetch and utilize information seamlessly.
 
 ```sh
-ZIGCHAIN_NET_BASE="https://raw.githubusercontent.com/ZIGChain/networks-private/refs/heads/main/"
+ZIGCHAIN_NET_BASE="https://raw.githubusercontent.com/ZIGChain/networks/refs/heads/main"
 ```
 
 ### Selecting a Network
