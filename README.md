@@ -7,7 +7,7 @@ At any given time, there will be multiple active networks:
 | Network     | Status | Version (Binary Version) | Description                                                       |
 |-------------|--------|--------------------------|-------------------------------------------------------------------|
 | **mainnet** | Soon   | Soon                     | The production-ready ZIGChain mainnet.                            |
-| **testnet** | ✔️     | v0 (0.4.1)               | The public ZIGChain testnet for developers and ecosystem testing. |
+| **testnet** | ✔️     | v1 (1.0.0)               | The public ZIGChain testnet for developers and ecosystem testing. |
 
 Each network has a dedicated directory containing essential configuration details. These directories include:
 
@@ -24,7 +24,7 @@ Each network has a dedicated directory containing essential configuration detail
 
 The configuration details in this repository can be used to automate deployment and configuration tasks for ZIGChain.
 
-All network data is structured consistently, allowing you to fetch and utilize information seamlessly.
+All network data is structured consistently, allowing you to fetch and use information seamlessly.
 
 ```sh
 ZIGCHAIN_NET_BASE="https://raw.githubusercontent.com/ZIGChain/networks-private/refs/heads/main/"
@@ -34,7 +34,7 @@ ZIGCHAIN_NET_BASE="https://raw.githubusercontent.com/ZIGChain/networks-private/r
 
 ```sh
 # Testnet
-ZIGCHAIN_NET="$ZIGCHAIN_NET_BASE/zig-test-1"
+ZIGCHAIN_NET="$ZIGCHAIN_NET_BASE/zig-test-2"
 ```
 
 ### Fetching Network Information
