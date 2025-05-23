@@ -1,7 +1,7 @@
 {
   "app_name": "zigchaind",
-  "app_version": "1.0.0",
-  "genesis_time": "2025-05-19T11:12:28.81961853Z",
+  "app_version": "1",
+  "genesis_time": "2025-05-23T12:17:56.338648979Z",
   "chain_id": "zig-test-2",
   "initial_height": 1,
   "app_hash": null,
@@ -19,93 +19,107 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1mhvrxm2tuevucjfc3f59rg4wvwf5xcrhk3auz7",
+          "address": "zig1w7qyrz7nzz5pzsywrpk685vts4r5hfrg0xk30g",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1clau0pydcsy968etfw0436nf5je6pw5mnmnk5w",
+          "address": "zig1v6q4m8u95hwghzskk59a79gk5zymfp263vkyec",
           "pub_key": null,
           "account_number": "1",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1xcexw2jeqt3q2l3japr89awlzzs8k7xakfwcac",
+          "address": "zig1mhvrxm2tuevucjfc3f59rg4wvwf5xcrhk3auz7",
           "pub_key": null,
           "account_number": "2",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig16qagtdxv2a4n8zx8x8c3r29zr5j23c522wwkg9",
+          "address": "zig1clau0pydcsy968etfw0436nf5je6pw5mnmnk5w",
           "pub_key": null,
           "account_number": "3",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1qk9rx4vnjz9xcj5lselgakhxget6q5sfypvunz",
+          "address": "zig1xcexw2jeqt3q2l3japr89awlzzs8k7xakfwcac",
           "pub_key": null,
           "account_number": "4",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1pwwymlyeyfcz3pjvcegvz8tj3yf0pr3w48m900",
+          "address": "zig16qagtdxv2a4n8zx8x8c3r29zr5j23c522wwkg9",
           "pub_key": null,
           "account_number": "5",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig132zcfrjegj6p34nn5dr64tue28ugz3shjg0zun",
+          "address": "zig1qk9rx4vnjz9xcj5lselgakhxget6q5sfypvunz",
           "pub_key": null,
           "account_number": "6",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1cs096jfrav2w9pxh9rngpdwcaqrsgad253yesd",
+          "address": "zig1pwwymlyeyfcz3pjvcegvz8tj3yf0pr3w48m900",
           "pub_key": null,
           "account_number": "7",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig19kfhpr3tjpzpr0892uyys2ekeyscm9tn3kt422",
+          "address": "zig132zcfrjegj6p34nn5dr64tue28ugz3shjg0zun",
           "pub_key": null,
           "account_number": "8",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig17qmtv3aytn2kr3wn7k8rm4uzean8rgs6au6z86",
+          "address": "zig1cs096jfrav2w9pxh9rngpdwcaqrsgad253yesd",
           "pub_key": null,
           "account_number": "9",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1s3mhkcycpgjj5tdv09ux6qg7hgzcyu6shzsfu0",
+          "address": "zig19kfhpr3tjpzpr0892uyys2ekeyscm9tn3kt422",
           "pub_key": null,
           "account_number": "10",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1cvelykm6dsu90e66ydlnmw934pxem8y8ntjlnr",
+          "address": "zig17qmtv3aytn2kr3wn7k8rm4uzean8rgs6au6z86",
           "pub_key": null,
           "account_number": "11",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "zig1fw7yrucw09guffffdac64c3x5yc6rtlpt0nm5a",
+          "address": "zig1s3mhkcycpgjj5tdv09ux6qg7hgzcyu6shzsfu0",
           "pub_key": null,
           "account_number": "12",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1cvelykm6dsu90e66ydlnmw934pxem8y8ntjlnr",
+          "pub_key": null,
+          "account_number": "13",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1fw7yrucw09guffffdac64c3x5yc6rtlpt0nm5a",
+          "pub_key": null,
+          "account_number": "14",
           "sequence": "0"
         }
       ]
@@ -124,7 +138,7 @@
           "coins": [
             {
               "denom": "uzig",
-              "amount": "25000000000000"
+              "amount": "23000000000000"
             }
           ]
         },
@@ -158,6 +172,32 @@
         {
           "address": "zig1fw7yrucw09guffffdac64c3x5yc6rtlpt0nm5a",
           "coins": []
+        },
+        {
+          "address": "zig1v6q4m8u95hwghzskk59a79gk5zymfp263vkyec",
+          "coins": [
+            {
+              "denom": "abc",
+              "amount": "200000000000000000000"
+            },
+            {
+              "denom": "usdt",
+              "amount": "200000000000000000000"
+            },
+            {
+              "denom": "uzig",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1w7qyrz7nzz5pzsywrpk685vts4r5hfrg0xk30g",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1000000000000"
+            }
+          ]
         },
         {
           "address": "zig1s3mhkcycpgjj5tdv09ux6qg7hgzcyu6shzsfu0",
@@ -223,6 +263,14 @@
         }
       ],
       "supply": [
+        {
+          "denom": "abc",
+          "amount": "200000000000000000000"
+        },
+        {
+          "denom": "usdt",
+          "amount": "200000000000000000000"
+        },
         {
           "denom": "uzig",
           "amount": "2312500000000000"
@@ -341,7 +389,7 @@
                 "validator_address": "zigvaloper1pwwymlyeyfcz3pjvcegvz8tj3yf0pr3wqqhrwk",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "st1MpzliPMfK2j5TPoAsvXmyAFLVV/GY7i5PEvWWZnU="
+                  "key": "f+akljJ8Y0dKwWz3bKkRN+RDz9EM+yA/j7Gre+Hn02c="
                 },
                 "value": {
                   "denom": "uzig",
@@ -349,7 +397,7 @@
                 }
               }
             ],
-            "memo": "a2fc2bcd95d0ef6abe067218235f4947546133e6@172.31.9.209:26656",
+            "memo": "785a3b86869878a12a5a2cf3f6f532689a4cecdb@172.31.9.209:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -378,7 +426,7 @@
             "tip": null
           },
           "signatures": [
-            "NhNfctbPmUs6WfKnzvP++echt+g1ZyvjZUcfw+t27g5A/9TQEMbzn55Jph1Ro37Rk1Hah4jr88WK02ahSrnMRA=="
+            "FszChKAMf4ba1ufafJGuHvTtIJpo6D+NmstUcXKBzPpPrNERJt5xLj6kaf/N1U/wcwSzHUk1KH3R+0e0TygkPQ=="
           ]
         }
       ]
