@@ -325,6 +325,8 @@
       "params": {
         "beneficiary": "zig1s3mhkcycpgjj5tdv09ux6qg7hgzcyu6shzsfu0",
         "creationFee": "10000000",
+        "max_slippage": "0",
+        "minimal_liquidity_lock": "1000",
         "newPoolFeePct": "100"
       },
       "poolList": [],
@@ -591,14 +593,19 @@
       "validators": []
     },
     "tokenwrapper": {
-      "client_id": "07-tendermint-0",
+      "counterparty_channel": "channel-0",
+      "counterparty_client_id": "07-tendermint-0",
+      "counterparty_port": "transfer",
       "decimal_difference": 12,
       "denom": "waxlzig",
       "enabled": false,
+      "native_channel": "channel-0",
+      "native_client_id": "07-tendermint-0",
+      "native_port": "transfer",
       "operator_address": "zig1fw7yrucw09guffffdac64c3x5yc6rtlpt0nm5a",
       "params": {},
-      "source_channel": "channel-0",
-      "source_port": "transfer",
+      "pauser_addresses": [],
+      "proposed_operator_address": "zig1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk9whvl",
       "total_transferred_in": "0",
       "total_transferred_out": "0"
     },
