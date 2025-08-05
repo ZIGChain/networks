@@ -1,1 +1,1 @@
-https://testnet-api.zigchain.com
+https://public-zigchain-testnet-lcd.numia.xyz

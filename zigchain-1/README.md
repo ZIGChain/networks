@@ -1,4 +1,2 @@
 Mainnet Information
--------------------------
-
-Coming soon
+----------------------

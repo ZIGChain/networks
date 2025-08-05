@@ -1,0 +1,2697 @@
+{
+  "app_name": "zigchaind",
+  "app_version": "1",
+  "genesis_time": "2025-06-23T09:50:52.607734Z",
+  "chain_id": "zigchain-1",
+  "initial_height": 1,
+  "app_hash": null,
+  "app_state": {
+    "06-solomachine": null,
+    "07-tendermint": null,
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig18vykgjgcmp2z4xzkt6mh74glrpd7qda8u8ntzx",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig10542dl7lhkhhusu9xmmgj2pnz0jcrdjkq0uky6",
+          "pub_key": null,
+          "account_number": "1",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig14har2kjzze5adwprvwjtruf2lzvfta53wflpml",
+          "pub_key": null,
+          "account_number": "2",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1yykdhjywf952sewew90q2xe8aym0zkrc8sjk4l",
+          "pub_key": null,
+          "account_number": "3",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1v7p4ddz60c6jlkn6sf2ll5d5uf0n0lp4dszfmd",
+          "pub_key": null,
+          "account_number": "4",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1u328mmucwpkjwgexkj440uaqvjtgj0ls2r2dwd",
+          "pub_key": null,
+          "account_number": "5",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1jv4pn9njveg766udylpy5g0ulp9ss28msfwyn4",
+          "pub_key": null,
+          "account_number": "6",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1vjfv368k3g4tn8qjtkvrv6mce6w06qhpje8fsd",
+          "pub_key": null,
+          "account_number": "7",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1axsz0m9tls0gzsrm7h4gnr50nqfvfygpknjmqu",
+          "pub_key": null,
+          "account_number": "8",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig16s37xe2wqz0ul2gk4af0dyycn6xu8u3kx6r5fs",
+          "pub_key": null,
+          "account_number": "9",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig15pwqnx4hgkwq839xv3jgjxh9aj2wdg8pj2yzlr",
+          "pub_key": null,
+          "account_number": "10",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1vd9ljpsgq5ev7yf7r6tu7t237qqpf2vezxesdc",
+          "pub_key": null,
+          "account_number": "11",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1jh6jve7n4pu9vxnmr67eg4m6qk7d7s4lujs6wt",
+          "pub_key": null,
+          "account_number": "12",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1uuzhaukkq0vwkvtyyf8tc9qma3mnqrq5uz7mym",
+          "pub_key": null,
+          "account_number": "13",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig18d3u2j3jemdwd9v3487rpw93z4e9nvm47s04zw",
+          "pub_key": null,
+          "account_number": "14",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig12lh5dc5qz7rt8ut5lzkrefwgh9c4szsajj0ftk",
+          "pub_key": null,
+          "account_number": "15",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1q5a0wgns4ya8d6k8kylury5grrr85wkadhdy0e",
+          "pub_key": null,
+          "account_number": "16",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1knjcg5l6ayrfcr9qgrln9l2zv5gs6s6fgcfpn4",
+          "pub_key": null,
+          "account_number": "17",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig18wuqtz6q38gad9k5adarkvyx06xcmwn7r47pam",
+          "pub_key": null,
+          "account_number": "18",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1hs0lf6afhfl6xdmwgcxnj64nmgfy4eece80ctx",
+          "pub_key": null,
+          "account_number": "19",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1dxelv69u2udlfv5tpq84rhtk2ta996749gjrlv",
+          "pub_key": null,
+          "account_number": "20",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1uypn93ru5hf80hhla25qal3je7cxslxgqrtse0",
+          "pub_key": null,
+          "account_number": "21",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1fvvud2qw4jtfr83c7t4nx6pcfsqz5dk9vccz9e",
+          "pub_key": null,
+          "account_number": "22",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1zf2h22kk688zyt2qs3l6duqnc7slu0nugasxau",
+          "pub_key": null,
+          "account_number": "23",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1vsup4ntahslesaekz8zeh4mjwpsq99jzq3ak7t",
+          "pub_key": null,
+          "account_number": "24",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1yxhq4450ycq6n44yr77hd37a5zl46pl7pvmhcy",
+          "pub_key": null,
+          "account_number": "25",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1xq0z2t75g4fzf8twqtpvxssgr8rh8fahqylnce",
+          "pub_key": null,
+          "account_number": "26",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1rt37cfdswehhrn8872a4043npcrcp5vxdnk07x",
+          "pub_key": null,
+          "account_number": "27",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1rnnsy4uaj27lds5qq0vr07f0577p0qsxnw7ekt",
+          "pub_key": null,
+          "account_number": "28",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1w4329yagrpynvzdck0kl3h6hmyucqcgkvn2tkv",
+          "pub_key": null,
+          "account_number": "29",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1n9elu0sfudpllu40g8v07lhrace4qt6uyps5c5",
+          "pub_key": null,
+          "account_number": "30",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1flunese07h2f2tgejjzj20p7ydfjfaecrt0wqp",
+          "pub_key": null,
+          "account_number": "31",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig197g9k8w3vw6emgnr4kp0scxx5zefay4fj7vm2a",
+          "pub_key": null,
+          "account_number": "32",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1gd4xvpvfu8m0dp2sdnvwjt5lf5dkfv86e98mz8",
+          "pub_key": null,
+          "account_number": "33",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1nmgrrcvq4k0ss0qqzj9kvvfdv9jrea4qdagk59",
+          "pub_key": null,
+          "account_number": "34",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1m2pulu8x2nrvvcfwl9lwfyrz8twnfq2xn5zw0m",
+          "pub_key": null,
+          "account_number": "35",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1yn37jpeumsgsh6a2xrkdda5mhk8as6cgrn69eq",
+          "pub_key": null,
+          "account_number": "36",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1uve53x8xwd8rkkt9dldxkgfsg2fvd3rsg8t475",
+          "pub_key": null,
+          "account_number": "37",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig18eyx0r8heqvhs7sv9lanxwsxdrgv4wvs32ckr5",
+          "pub_key": null,
+          "account_number": "38",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1tzet22nfdtfj6m0e3ewryuurx42dnvx732xmwk",
+          "pub_key": null,
+          "account_number": "39",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1ekmlv84kl76snqvkzfqrxw646lxt0qay84qqfr",
+          "pub_key": null,
+          "account_number": "40",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1zq4auu48ch2fv6967hnxganc5hyzswxzctjs5d",
+          "pub_key": null,
+          "account_number": "41",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1wf97ajuwv5nwuyll2w35vg64wmnajvzcyphl5n",
+          "pub_key": null,
+          "account_number": "42",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1vgqtppfwehzwvga4wve89ylsygfxau5vgne9ue",
+          "pub_key": null,
+          "account_number": "43",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1xu9x8zvtrqwz96gplu9ap3hmxwcc7x98kzhjap",
+          "pub_key": null,
+          "account_number": "44",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig12kll6gr6rhmfd9aw9krhn5j2nfncvd0t0rxrga",
+          "pub_key": null,
+          "account_number": "45",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1dc2d76crq9yhmhqj5qh7umqfcep3ljty32s3j5",
+          "pub_key": null,
+          "account_number": "46",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1aj590kcyfsaqlpku5f2nx0337j9tptjelry0p5",
+          "pub_key": null,
+          "account_number": "47",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1lzpp5grvzcx4vlvzr97x0hdgx9sh7qef8ugs5w",
+          "pub_key": null,
+          "account_number": "48",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1tda893ctpa22rlnx83fn7wu7xtrdaf5u58c7ry",
+          "pub_key": null,
+          "account_number": "49",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1dws6kdf203y5g82jlydldj2wujjx30wsmvf0y4",
+          "pub_key": null,
+          "account_number": "50",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1al2seew4rh6r44aycqxfd8hkzqv8x5fga54elq",
+          "pub_key": null,
+          "account_number": "51",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1ex7p43xalax0srdmfgdl24h5p8m4n8az3v3vgd",
+          "pub_key": null,
+          "account_number": "52",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1f8np895s3sp3eeg6esptaq9mjlrhkf4c8cw0rn",
+          "pub_key": null,
+          "account_number": "53",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig12jutvm89x8z9u2m8n2649xycstg8fn2rz47ptq",
+          "pub_key": null,
+          "account_number": "54",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1ljws59kd3d4s57gka8emv9u7c0ur0ehdtl0fxf",
+          "pub_key": null,
+          "account_number": "55",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1kvj8mxk9d4739hzel6l242233sm5cdwa2yrjjc",
+          "pub_key": null,
+          "account_number": "56",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1rwqx892nvzjc4jdz42nzefqdpw46e79rqy6zrn",
+          "pub_key": null,
+          "account_number": "57",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1cgydtqwcsma2venudh8wwd2u7m74h3qj403duy",
+          "pub_key": null,
+          "account_number": "58",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1rkfv3kkshssj8tnsjj4yem8qmdarxyezxmaep2",
+          "pub_key": null,
+          "account_number": "59",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1ups0v6dntt8wvg4g8yv9xavw56hyjps798wrf2",
+          "pub_key": null,
+          "account_number": "60",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1amjcasy8cz50eexqjxtcef9tezxsxp6ec0g835",
+          "pub_key": null,
+          "account_number": "61",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig175g3pc5ugykvwp0eknzps032asyd5ckar42aye",
+          "pub_key": null,
+          "account_number": "62",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1vvcgs50e97qmc4xt3rfk7z8ev20c0rpfuknalg",
+          "pub_key": null,
+          "account_number": "63",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1hs06v3nhzzu4ugd8gsxgrz039jxjle2qmrs4ws",
+          "pub_key": null,
+          "account_number": "64",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1yyqc35dhre4gqr56gh9vs58k53krfzxy5n3rqy",
+          "pub_key": null,
+          "account_number": "65",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1x0v5sargzpqfsmhgt2ql40c283ymcpmah67q6y",
+          "pub_key": null,
+          "account_number": "66",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1g2ee4he4s7625tumqnenwclpy4shsft8jm6qec",
+          "pub_key": null,
+          "account_number": "67",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1km0d0fhyzuwrn5t8h5gfvje4hpeaqj7mr790x2",
+          "pub_key": null,
+          "account_number": "68",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1errshc3kyfvv3agkshakg52p0sym5eetvzv7te",
+          "pub_key": null,
+          "account_number": "69",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1kzqlhtxmkrnpp4hehhadtd92h66qfy5qkllezq",
+          "pub_key": null,
+          "account_number": "70",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig14uy6a454zq6p3geffpe7zuukf3thp3dz694q7w",
+          "pub_key": null,
+          "account_number": "71",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig13slf3f3s0x9qyrl23gdyl6h9sztajtakzjc4u4",
+          "pub_key": null,
+          "account_number": "72",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1lahqy2ew6a8gvpz8g08l076rfhqkgj3ye3srly",
+          "pub_key": null,
+          "account_number": "73",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1wh825ajwu9v4vxrnw2cnnfnpakp7c2f3wwwkcw",
+          "pub_key": null,
+          "account_number": "74",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1xd6rkhn463e7umzwf8jv4czgt3pal90tay7mjt",
+          "pub_key": null,
+          "account_number": "75",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1l6sdw7qsnahtcvwjarf8u8cdwg7v7t5jmhvtya",
+          "pub_key": null,
+          "account_number": "76",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig12vl5ay9lmgwudu5rtrdu6u6jnkfdpm9p8nl29d",
+          "pub_key": null,
+          "account_number": "77",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1cknu7lerpnuhemvew9n7rxhems777h5we48wv6",
+          "pub_key": null,
+          "account_number": "78",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig120lvcs68elvv050alntk7600yu2z5ku84x4nwt",
+          "pub_key": null,
+          "account_number": "79",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1apv80qxsug8909296p9gt2hhflxqjwhsvwcekx",
+          "pub_key": null,
+          "account_number": "80",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig14ncsmmyzpaut29xmenyh0vud224m9tu4yg45jv",
+          "pub_key": null,
+          "account_number": "81",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1t4k9fhkewcm86nd7hqy0jy9gyvtc0ywv3z3cr6",
+          "pub_key": null,
+          "account_number": "82",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig17p8f09q3lgzdreyve40ep0aedu3pj83yeuqqa6",
+          "pub_key": null,
+          "account_number": "83",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1mkstl30cmeu8lm67schnudewmkyf7ysjuzrfrl",
+          "pub_key": null,
+          "account_number": "84",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1j57rfdjh4yyq2dk300q6h6d92v4jc50yjx0ca6",
+          "pub_key": null,
+          "account_number": "85",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1a0hm0dwnack2f2v6e2ye2z2fgspqaa4gd7peat",
+          "pub_key": null,
+          "account_number": "86",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1pm740wa88pa7mlpdpjhvq3w6ufmwlrjthtc973",
+          "pub_key": null,
+          "account_number": "87",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig134estjtaznldyqd3qthzcvflmpk7lrvv9yaxd0",
+          "pub_key": null,
+          "account_number": "88",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1wjqmepj4n0eecrpp0ylqe2ysw7cvntpef7tr48",
+          "pub_key": null,
+          "account_number": "89",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1ccaln38r4mz8vvy728eau9dza4pp83rd23darz",
+          "pub_key": null,
+          "account_number": "90",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1663gp6lzhhlsj2cl4d7wtnmfef0zk70j2evd7q",
+          "pub_key": null,
+          "account_number": "91",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig12rldv2qzze5vrvhc7pyt5h8e74mxfdqegpz2kt",
+          "pub_key": null,
+          "account_number": "92",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1hkg7nsv779l7vq5rmjkmquqpn94fc84xmgj5ec",
+          "pub_key": null,
+          "account_number": "93",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1mephxdy8etnjwr4h6dj3mdteedm5wljcevejju",
+          "pub_key": null,
+          "account_number": "94",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1dmajzlsgv8qty6ycttfpr3lua346auc3uferv8",
+          "pub_key": null,
+          "account_number": "95",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1n2uscc2yvsgxgp44slp947srexhmsq84pem6gf",
+          "pub_key": null,
+          "account_number": "96",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1avns4gt3s4k6chvq205pwucet2cnh30qfchv4e",
+          "pub_key": null,
+          "account_number": "97",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1jrnr3etsad2pcreyxe24rvv5afcfeu28q8uf7p",
+          "pub_key": null,
+          "account_number": "98",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1j063wnaprdk739nls7xlhaypjqgl4h3yk7gfk2",
+          "pub_key": null,
+          "account_number": "99",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1k3ml52fhlhlepk7hemx6989cty3qr3l5p4km66",
+          "pub_key": null,
+          "account_number": "100",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1e436spena77934ufyfvp6mvnmvpz58arwpuwgm",
+          "pub_key": null,
+          "account_number": "101",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig19r6av97nccudhf6lpgz46m8j964mzfves7570d",
+          "pub_key": null,
+          "account_number": "102",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1c7dqvlxvyrf9u8cr747atg27mfqzpzmuanf325",
+          "pub_key": null,
+          "account_number": "103",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1dv3p200aranw3gchq8dg0dg76eyq49f9j7rugg",
+          "pub_key": null,
+          "account_number": "104",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1nnqj24j4ca4af8ys3w49ncth7aemktx73vnmp2",
+          "pub_key": null,
+          "account_number": "105",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1er0q8k7lnq3rqp0qtysrsf37gd5tmq2kf5lhyf",
+          "pub_key": null,
+          "account_number": "106",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1a35a6yuk4yayjvdnfvxd64ygecacxnwqyflntv",
+          "pub_key": null,
+          "account_number": "107",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1gx66prfncr0hfmkajgawyzx8qg464ucsuxyehf",
+          "pub_key": null,
+          "account_number": "108",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1jm5npxg8kfma2nr8ntv6qnqa57wjxjmge40lsz",
+          "pub_key": null,
+          "account_number": "109",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1l404mr92gnn6czpqnttlw72ce7nwa4r54xz29n",
+          "pub_key": null,
+          "account_number": "110",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1qrw9juzv7x0p4ks7g0xv43es3ekvt78lkmp777",
+          "pub_key": null,
+          "account_number": "111",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig17a3v5wjmeldh85jclqh4m32yz5zzqphehe33zt",
+          "pub_key": null,
+          "account_number": "112",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig18zmcx2mh0e3g0pzuta8szqcvqat9va75juhhky",
+          "pub_key": null,
+          "account_number": "113",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig14lwyf2kqlnq0fj489gcqmp9wwwjv3da0fjwgpq",
+          "pub_key": null,
+          "account_number": "114",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1c785vs2z6qx8akvfk3kh8qldtegpce2nspg0hv",
+          "pub_key": null,
+          "account_number": "115",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig19lm7vzf7l8ez52nglqq7pswty0vxvjr75utjgu",
+          "pub_key": null,
+          "account_number": "116",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1lamr0kcus2puxsqt8vyqnp3fdjt7vs2qzr5h7p",
+          "pub_key": null,
+          "account_number": "117",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1mvy456gqss3m0y0jvmytdzjtq9pf25vdhajyua",
+          "pub_key": null,
+          "account_number": "118",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1jm5sjqm52sjqfc5yk3x6wrehy4htwgd6j7lhfx",
+          "pub_key": null,
+          "account_number": "119",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig14sg46qu6zrfw7g8axg94jfj32cqap55qaglrq9",
+          "pub_key": null,
+          "account_number": "120",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1e90m0retxntctyarld4mh6lmfumtadzqms730d",
+          "pub_key": null,
+          "account_number": "121",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1y9dwg2zjt3znvrlgw0vshhu5ur2hlw0wm0lv52",
+          "pub_key": null,
+          "account_number": "122",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1fygzwrlsmmeu3f9an93qqlcx83ecu9psevzyy8",
+          "pub_key": null,
+          "account_number": "123",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig132vgty2mngpskkzvphqnx7n240xdk9ucj0uw70",
+          "pub_key": null,
+          "account_number": "124",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1h4f8qxqchrc8xr7qe2emehe57d96g3jv94q04z",
+          "pub_key": null,
+          "account_number": "125",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig19ywgs7lmnv8scew66rxx3pxhn9wd7fx3wuy545",
+          "pub_key": null,
+          "account_number": "126",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1yxexle4xdvzhw96gc5rs3g6epfck34anq6pj4s",
+          "pub_key": null,
+          "account_number": "127",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig195fuw34vxqgp9hdr2kt5m4kxtpx3yugu7wrjyg",
+          "pub_key": null,
+          "account_number": "128",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1zjtfzmpjlll0rq3tdu6fr4dcfc8qshxxr576qr",
+          "pub_key": null,
+          "account_number": "129",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1qakh63kn250qrmsd5wcw776z7l4s4sphpf6ckd",
+          "pub_key": null,
+          "account_number": "130",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1cu6rhkhduvserme2w57els66yuztyw9dn0p2dk",
+          "pub_key": null,
+          "account_number": "131",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1y9lppgt7l75z060j2x4aypnera9fvr98dmg0nu",
+          "pub_key": null,
+          "account_number": "132",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig177ah7e25ekc0r2dkup48rl5lam4mcu058v7xk5",
+          "pub_key": null,
+          "account_number": "133",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1t6vkksx4m8t8g86krussw35anwtq47j858yddv",
+          "pub_key": null,
+          "account_number": "134",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig15xjeg95y48pcqc23ld6lucujf7pg6ef5lrzw84",
+          "pub_key": null,
+          "account_number": "135",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1qnxm22ap4z8qy6wdcgkff8xp4nghfc87ltcuwu",
+          "pub_key": null,
+          "account_number": "136",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig18x2yf8h0luu00g5jt60qtwy7ydaujcfcldnxns",
+          "pub_key": null,
+          "account_number": "137",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1a5l0kz9r4qzlepdd3h6czrfkgwuj5yge5jed5q",
+          "pub_key": null,
+          "account_number": "138",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig10lppytrk6the8myg32kdjwdfsu03ydldtcj55u",
+          "pub_key": null,
+          "account_number": "139",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1ua4yvyglc4lqcv85jvdzn7nfhs6lf89hqr69xy",
+          "pub_key": null,
+          "account_number": "140",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1s0nnkf8zakflyrf2h4k8rn5qnzszff8fx4dnav",
+          "pub_key": null,
+          "account_number": "141",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "zig1zslc5444lqmwju6ntnwqltn786vflulz2x36fk",
+          "pub_key": null,
+          "account_number": "142",
+          "sequence": "0"
+        }
+      ]
+    },
+    "authz": {
+      "authorization": []
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "zig1qrw9juzv7x0p4ks7g0xv43es3ekvt78lkmp777",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3360000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1qnxm22ap4z8qy6wdcgkff8xp4nghfc87ltcuwu",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1q5a0wgns4ya8d6k8kylury5grrr85wkadhdy0e",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2166000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1qakh63kn250qrmsd5wcw776z7l4s4sphpf6ckd",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1pm740wa88pa7mlpdpjhvq3w6ufmwlrjthtc973",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1141000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1zq4auu48ch2fv6967hnxganc5hyzswxzctjs5d",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7368000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1zf2h22kk688zyt2qs3l6duqnc7slu0nugasxau",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5881000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1zslc5444lqmwju6ntnwqltn786vflulz2x36fk",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1zjtfzmpjlll0rq3tdu6fr4dcfc8qshxxr576qr",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1rt37cfdswehhrn8872a4043npcrcp5vxdnk07x",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8068000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1rwqx892nvzjc4jdz42nzefqdpw46e79rqy6zrn",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5325000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1rnnsy4uaj27lds5qq0vr07f0577p0qsxnw7ekt",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9188000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1rkfv3kkshssj8tnsjj4yem8qmdarxyezxmaep2",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3886000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1yyqc35dhre4gqr56gh9vs58k53krfzxy5n3rqy",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9110000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1yykdhjywf952sewew90q2xe8aym0zkrc8sjk4l",
+          "coins": []
+        },
+        {
+          "address": "zig1y9dwg2zjt3znvrlgw0vshhu5ur2hlw0wm0lv52",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "936850000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1y9lppgt7l75z060j2x4aypnera9fvr98dmg0nu",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1yxhq4450ycq6n44yr77hd37a5zl46pl7pvmhcy",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4180000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1yxexle4xdvzhw96gc5rs3g6epfck34anq6pj4s",
+          "coins": []
+        },
+        {
+          "address": "zig1yn37jpeumsgsh6a2xrkdda5mhk8as6cgrn69eq",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6090000000"
+            }
+          ]
+        },
+        {
+          "address": "zig19r6av97nccudhf6lpgz46m8j964mzfves7570d",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9610000000"
+            }
+          ]
+        },
+        {
+          "address": "zig19ywgs7lmnv8scew66rxx3pxhn9wd7fx3wuy545",
+          "coins": []
+        },
+        {
+          "address": "zig195fuw34vxqgp9hdr2kt5m4kxtpx3yugu7wrjyg",
+          "coins": []
+        },
+        {
+          "address": "zig197g9k8w3vw6emgnr4kp0scxx5zefay4fj7vm2a",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4019000000"
+            }
+          ]
+        },
+        {
+          "address": "zig19lm7vzf7l8ez52nglqq7pswty0vxvjr75utjgu",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "427166000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1xq0z2t75g4fzf8twqtpvxssgr8rh8fahqylnce",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8671000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1xd6rkhn463e7umzwf8jv4czgt3pal90tay7mjt",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5329000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1x0v5sargzpqfsmhgt2ql40c283ymcpmah67q6y",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1261000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1xu9x8zvtrqwz96gplu9ap3hmxwcc7x98kzhjap",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4295000000"
+            }
+          ]
+        },
+        {
+          "address": "zig18zmcx2mh0e3g0pzuta8szqcvqat9va75juhhky",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig18x2yf8h0luu00g5jt60qtwy7ydaujcfcldnxns",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig18d3u2j3jemdwd9v3487rpw93z4e9nvm47s04zw",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7555000000"
+            }
+          ]
+        },
+        {
+          "address": "zig18wuqtz6q38gad9k5adarkvyx06xcmwn7r47pam",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9903000000"
+            }
+          ]
+        },
+        {
+          "address": "zig18eyx0r8heqvhs7sv9lanxwsxdrgv4wvs32ckr5",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4389000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1gx66prfncr0hfmkajgawyzx8qg464ucsuxyehf",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6974000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1g2ee4he4s7625tumqnenwclpy4shsft8jm6qec",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9927000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1gd4xvpvfu8m0dp2sdnvwjt5lf5dkfv86e98mz8",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1899000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1fygzwrlsmmeu3f9an93qqlcx83ecu9psevzyy8",
+          "coins": []
+        },
+        {
+          "address": "zig1f8np895s3sp3eeg6esptaq9mjlrhkf4c8cw0rn",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6690000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1fvvud2qw4jtfr83c7t4nx6pcfsqz5dk9vccz9e",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4483000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1flunese07h2f2tgejjzj20p7ydfjfaecrt0wqp",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1114000000"
+            }
+          ]
+        },
+        {
+          "address": "zig12rldv2qzze5vrvhc7pyt5h8e74mxfdqegpz2kt",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2422000000"
+            }
+          ]
+        },
+        {
+          "address": "zig12vl5ay9lmgwudu5rtrdu6u6jnkfdpm9p8nl29d",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5954000000"
+            }
+          ]
+        },
+        {
+          "address": "zig120lvcs68elvv050alntk7600yu2z5ku84x4nwt",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4239000000"
+            }
+          ]
+        },
+        {
+          "address": "zig12jutvm89x8z9u2m8n2649xycstg8fn2rz47ptq",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1342000000"
+            }
+          ]
+        },
+        {
+          "address": "zig12kll6gr6rhmfd9aw9krhn5j2nfncvd0t0rxrga",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2200000000"
+            }
+          ]
+        },
+        {
+          "address": "zig12lh5dc5qz7rt8ut5lzkrefwgh9c4szsajj0ftk",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8153000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1tzet22nfdtfj6m0e3ewryuurx42dnvx732xmwk",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4880000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1tda893ctpa22rlnx83fn7wu7xtrdaf5u58c7ry",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9062000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1t4k9fhkewcm86nd7hqy0jy9gyvtc0ywv3z3cr6",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7753000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1t6vkksx4m8t8g86krussw35anwtq47j858yddv",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1vgqtppfwehzwvga4wve89ylsygfxau5vgne9ue",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9369000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1vvcgs50e97qmc4xt3rfk7z8ev20c0rpfuknalg",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1722000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1vsup4ntahslesaekz8zeh4mjwpsq99jzq3ak7t",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2949000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1vjfv368k3g4tn8qjtkvrv6mce6w06qhpje8fsd",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1v7p4ddz60c6jlkn6sf2ll5d5uf0n0lp4dszfmd",
+          "coins": []
+        },
+        {
+          "address": "zig1dxelv69u2udlfv5tpq84rhtk2ta996749gjrlv",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1693000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1dv3p200aranw3gchq8dg0dg76eyq49f9j7rugg",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2511000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1dws6kdf203y5g82jlydldj2wujjx30wsmvf0y4",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4464000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1dc2d76crq9yhmhqj5qh7umqfcep3ljty32s3j5",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9909000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1dmajzlsgv8qty6ycttfpr3lua346auc3uferv8",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6765000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1wf97ajuwv5nwuyll2w35vg64wmnajvzcyphl5n",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5553000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1wjqmepj4n0eecrpp0ylqe2ysw7cvntpef7tr48",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2877000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1w4329yagrpynvzdck0kl3h6hmyucqcgkvn2tkv",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7369000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1wh825ajwu9v4vxrnw2cnnfnpakp7c2f3wwwkcw",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9629000000"
+            }
+          ]
+        },
+        {
+          "address": "zig10542dl7lhkhhusu9xmmgj2pnz0jcrdjkq0uky6",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "816498990000000"
+            }
+          ]
+        },
+        {
+          "address": "zig10lppytrk6the8myg32kdjwdfsu03ydldtcj55u",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1s0nnkf8zakflyrf2h4k8rn5qnzszff8fx4dnav",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig15pwqnx4hgkwq839xv3jgjxh9aj2wdg8pj2yzlr",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10250000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig132vgty2mngpskkzvphqnx7n240xdk9ucj0uw70",
+          "coins": []
+        },
+        {
+          "address": "zig1vd9ljpsgq5ev7yf7r6tu7t237qqpf2vezxesdc",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10250000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig13slf3f3s0x9qyrl23gdyl6h9sztajtakzjc4u4",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1141000000"
+            }
+          ]
+        },
+        {
+          "address": "zig134estjtaznldyqd3qthzcvflmpk7lrvv9yaxd0",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3512000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1jrnr3etsad2pcreyxe24rvv5afcfeu28q8uf7p",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8557000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1jv4pn9njveg766udylpy5g0ulp9ss28msfwyn4",
+          "coins": []
+        },
+        {
+          "address": "zig1j063wnaprdk739nls7xlhaypjqgl4h3yk7gfk2",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1256000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1j57rfdjh4yyq2dk300q6h6d92v4jc50yjx0ca6",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8348000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1jm5sjqm52sjqfc5yk3x6wrehy4htwgd6j7lhfx",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "982620000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1jm5npxg8kfma2nr8ntv6qnqa57wjxjmge40lsz",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3947000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1n9elu0sfudpllu40g8v07lhrace4qt6uyps5c5",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1975000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1n2uscc2yvsgxgp44slp947srexhmsq84pem6gf",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3741000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1nnqj24j4ca4af8ys3w49ncth7aemktx73vnmp2",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2835000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1nmgrrcvq4k0ss0qqzj9kvvfdv9jrea4qdagk59",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1295000000"
+            }
+          ]
+        },
+        {
+          "address": "zig15xjeg95y48pcqc23ld6lucujf7pg6ef5lrzw84",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig14sg46qu6zrfw7g8axg94jfj32cqap55qaglrq9",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "434205000000"
+            }
+          ]
+        },
+        {
+          "address": "zig14ncsmmyzpaut29xmenyh0vud224m9tu4yg45jv",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4792000000"
+            }
+          ]
+        },
+        {
+          "address": "zig14har2kjzze5adwprvwjtruf2lzvfta53wflpml",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "46059204760348"
+            }
+          ]
+        },
+        {
+          "address": "zig14uy6a454zq6p3geffpe7zuukf3thp3dz694q7w",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2432000000"
+            }
+          ]
+        },
+        {
+          "address": "zig14lwyf2kqlnq0fj489gcqmp9wwwjv3da0fjwgpq",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2000000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1kzqlhtxmkrnpp4hehhadtd92h66qfy5qkllezq",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2373000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1kvj8mxk9d4739hzel6l242233sm5cdwa2yrjjc",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7552000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1k3ml52fhlhlepk7hemx6989cty3qr3l5p4km66",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1556000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1knjcg5l6ayrfcr9qgrln9l2zv5gs6s6fgcfpn4",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1766000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1km0d0fhyzuwrn5t8h5gfvje4hpeaqj7mr790x2",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1614000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1hs06v3nhzzu4ugd8gsxgrz039jxjle2qmrs4ws",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5241000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1hs0lf6afhfl6xdmwgcxnj64nmgfy4eece80ctx",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3810000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1h4f8qxqchrc8xr7qe2emehe57d96g3jv94q04z",
+          "coins": []
+        },
+        {
+          "address": "zig1hkg7nsv779l7vq5rmjkmquqpn94fc84xmgj5ec",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7116000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1cgydtqwcsma2venudh8wwd2u7m74h3qj403duy",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9591000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1cknu7lerpnuhemvew9n7rxhems777h5we48wv6",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7293000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1ccaln38r4mz8vvy728eau9dza4pp83rd23darz",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4137000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1cu6rhkhduvserme2w57els66yuztyw9dn0p2dk",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1c785vs2z6qx8akvfk3kh8qldtegpce2nspg0hv",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "188076000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1c7dqvlxvyrf9u8cr747atg27mfqzpzmuanf325",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4350000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1errshc3kyfvv3agkshakg52p0sym5eetvzv7te",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9363000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1er0q8k7lnq3rqp0qtysrsf37gd5tmq2kf5lhyf",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3116000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1e90m0retxntctyarld4mh6lmfumtadzqms730d",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "555304000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1ex7p43xalax0srdmfgdl24h5p8m4n8az3v3vgd",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "3064000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1e436spena77934ufyfvp6mvnmvpz58arwpuwgm",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8690000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1ekmlv84kl76snqvkzfqrxw646lxt0qay84qqfr",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8277000000"
+            }
+          ]
+        },
+        {
+          "address": "zig16s37xe2wqz0ul2gk4af0dyycn6xu8u3kx6r5fs",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1400896286239652"
+            }
+          ]
+        },
+        {
+          "address": "zig1663gp6lzhhlsj2cl4d7wtnmfef0zk70j2evd7q",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1477000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1m2pulu8x2nrvvcfwl9lwfyrz8twnfq2xn5zw0m",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2218000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1mvy456gqss3m0y0jvmytdzjtq9pf25vdhajyua",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "271164000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1mkstl30cmeu8lm67schnudewmkyf7ysjuzrfrl",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7140000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1mephxdy8etnjwr4h6dj3mdteedm5wljcevejju",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2975000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1ups0v6dntt8wvg4g8yv9xavw56hyjps798wrf2",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8992000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1uypn93ru5hf80hhla25qal3je7cxslxgqrtse0",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5090000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1uve53x8xwd8rkkt9dldxkgfsg2fvd3rsg8t475",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6280000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1u328mmucwpkjwgexkj440uaqvjtgj0ls2r2dwd",
+          "coins": []
+        },
+        {
+          "address": "zig1uuzhaukkq0vwkvtyyf8tc9qma3mnqrq5uz7mym",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9662000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1ua4yvyglc4lqcv85jvdzn7nfhs6lf89hqr69xy",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1jh6jve7n4pu9vxnmr67eg4m6qk7d7s4lujs6wt",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10250000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1apv80qxsug8909296p9gt2hhflxqjwhsvwcekx",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8110000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1axsz0m9tls0gzsrm7h4gnr50nqfvfygpknjmqu",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000"
+            }
+          ]
+        },
+        {
+          "address": "zig18vykgjgcmp2z4xzkt6mh74glrpd7qda8u8ntzx",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10250000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1avns4gt3s4k6chvq205pwucet2cnh30qfchv4e",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9369000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1a0hm0dwnack2f2v6e2ye2z2fgspqaa4gd7peat",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1043000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1a35a6yuk4yayjvdnfvxd64ygecacxnwqyflntv",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "5513000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1aj590kcyfsaqlpku5f2nx0337j9tptjelry0p5",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "1808000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1a5l0kz9r4qzlepdd3h6czrfkgwuj5yge5jed5q",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1amjcasy8cz50eexqjxtcef9tezxsxp6ec0g835",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7790000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1al2seew4rh6r44aycqxfd8hkzqv8x5fga54elq",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "2576000000"
+            }
+          ]
+        },
+        {
+          "address": "zig17p8f09q3lgzdreyve40ep0aedu3pj83yeuqqa6",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9561000000"
+            }
+          ]
+        },
+        {
+          "address": "zig175g3pc5ugykvwp0eknzps032asyd5ckar42aye",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6316000000"
+            }
+          ]
+        },
+        {
+          "address": "zig17a3v5wjmeldh85jclqh4m32yz5zzqphehe33zt",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "8440000000"
+            }
+          ]
+        },
+        {
+          "address": "zig177ah7e25ekc0r2dkup48rl5lam4mcu058v7xk5",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1lzpp5grvzcx4vlvzr97x0hdgx9sh7qef8ugs5w",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "9609000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1ljws59kd3d4s57gka8emv9u7c0ur0ehdtl0fxf",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4565000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1l404mr92gnn6czpqnttlw72ce7nwa4r54xz29n",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "7759000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1l6sdw7qsnahtcvwjarf8u8cdwg7v7t5jmhvtya",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "4697000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1lahqy2ew6a8gvpz8g08l076rfhqkgj3ye3srly",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "6863000000"
+            }
+          ]
+        },
+        {
+          "address": "zig1lamr0kcus2puxsqt8vyqnp3fdjt7vs2qzr5h7p",
+          "coins": [
+            {
+              "denom": "uzig",
+              "amount": "575834000000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "uzig",
+          "amount": "2312500000000000"
+        }
+      ],
+      "denom_metadata": [
+        {
+          "description": "ZIGChain Mainnet Native Token",
+          "denom_units": [
+            {
+              "denom": "uzig",
+              "exponent": 0,
+              "aliases": [
+                "microzig"
+              ]
+            },
+            {
+              "denom": "mzig",
+              "exponent": 3,
+              "aliases": [
+                "millizig"
+              ]
+            },
+            {
+              "denom": "zig",
+              "exponent": 6,
+              "aliases": []
+            }
+          ],
+          "base": "uzig",
+          "display": "zig",
+          "name": "ZIG",
+          "symbol": "ZIG",
+          "uri": "",
+          "uri_hash": ""
+        }
+      ],
+      "send_enabled": []
+    },
+    "circuit": {
+      "account_permissions": [],
+      "disabled_type_urls": []
+    },
+    "consensus": null,
+    "crisis": {
+      "constant_fee": {
+        "amount": "1000",
+        "denom": "uzig"
+      }
+    },
+    "dex": {
+      "params": {
+        "beneficiary": "zig1v7p4ddz60c6jlkn6sf2ll5d5uf0n0lp4dszfmd",
+        "creationFee": "10000000",
+        "newPoolFeePct": "10"
+      },
+      "poolList": [],
+      "poolUidsList": [],
+      "poolsMeta": null
+    },
+    "distribution": {
+      "delegator_starting_infos": [],
+      "delegator_withdraw_infos": [],
+      "fee_pool": {
+        "community_pool": []
+      },
+      "outstanding_rewards": [],
+      "params": {
+        "base_proposer_reward": "0.000000000000000000",
+        "bonus_proposer_reward": "0.000000000000000000",
+        "community_tax": "0.02",
+        "withdraw_addr_enabled": true
+      },
+      "previous_proposer": "",
+      "validator_accumulated_commissions": [],
+      "validator_current_rewards": [],
+      "validator_historical_rewards": [],
+      "validator_slash_events": []
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "factory": {
+      "denomAuthList": [],
+      "denomList": [],
+      "params": {
+        "beneficiary": "zig1yykdhjywf952sewew90q2xe8aym0zkrc8sjk4l",
+        "createFeeAmount": 40000000,
+        "createFeeDenom": "uzig"
+      }
+    },
+    "feegrant": {
+      "allowances": []
+    },
+    "genutil": {
+      "gen_txs": [
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "myvalidator",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "",
+                "validator_address": "zigvaloper18vykgjgcmp2z4xzkt6mh74glrpd7qda8fqldrl",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "9YgITxKfSbAHfAxPWgt+cB7tG7VbtO5mbFCcgBeV0i0="
+                },
+                "value": {
+                  "denom": "uzig",
+                  "amount": "10000000000000"
+                }
+              }
+            ],
+            "memo": "f454cf7311ff3af757b026ba8874c877f3286ad9@172.20.3.255:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/cosmos.crypto.multisig.LegacyAminoPubKey",
+                  "threshold": 2,
+                  "public_keys": [
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "A523ynlGdDjRHycNTiaeBvKRXhwJVzgMfvd0hDUkBQft"
+                    },
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "AxXCbPZsBkY+tGE7kX+hrCbeVhNnfrF0wa2tI5woDeR6"
+                    },
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "AhpqI2yPpawNL9TvIinq4H9y6R3PXHvYZywUHX/c6Kjv"
+                    },
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "AywtHpHT25BLZmVp+TkO89TChfsB/MBpU1fiDxILasps"
+                    },
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "A38FKXd/3SR/EEAuJv1xFS5NI4+WjyJvAQvhTkylhRPK"
+                    },
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "A1VLPVOVOjuEorx/hPScd7k14f261uMJt7Q09mtrzV+1"
+                    },
+                    {
+                      "@type": "/cosmos.crypto.secp256k1.PubKey",
+                      "key": "AkUSFizRSia79G0EPQBBDjiJdtYhHEQJ8gMHpbnMsDv5"
+                    }
+                  ]
+                },
+                "mode_info": {
+                  "multi": {
+                    "bitarray": {
+                      "extra_bits_stored": 7,
+                      "elems": "iA=="
+                    },
+                    "mode_infos": [
+                      {
+                        "single": {
+                          "mode": "SIGN_MODE_LEGACY_AMINO_JSON"
+                        }
+                      },
+                      {
+                        "single": {
+                          "mode": "SIGN_MODE_LEGACY_AMINO_JSON"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "CkBmNCH3PfOgXy3HOj15JQ81nf9+DUlM2j+C9LGdT9uVYGtKS+sp1yOWdk05OpDu1Rbn0/EoFOPmfhJXwg05DYteCkA8A6k4PnTpfLKQzqInmdyRlc2pXb9p7w1ZwpjJQuJrsQBMQk+5DSzgSynyPQOv/FtYkQxoUI3EZJ87YKSiijg3"
+          ]
+        }
+      ]
+    },
+    "gov": {
+      "constitution": "Enabling wealth generation for everyone.",
+      "deposit_params": null,
+      "deposits": [],
+      "params": {
+        "burn_proposal_deposit_prevote": false,
+        "burn_vote_quorum": false,
+        "burn_vote_veto": true,
+        "expedited_min_deposit": [
+          {
+            "amount": "5000000000000",
+            "denom": "uzig"
+          }
+        ],
+        "expedited_threshold": "0.667",
+        "expedited_voting_period": "86400s",
+        "max_deposit_period": "1209600s",
+        "min_deposit": [
+          {
+            "amount": "10000000000",
+            "denom": "uzig"
+          }
+        ],
+        "min_deposit_ratio": "0.0",
+        "min_initial_deposit_ratio": "0.04",
+        "proposal_cancel_dest": "",
+        "proposal_cancel_ratio": "0.5",
+        "quorum": "0.334",
+        "threshold": "0.51",
+        "veto_threshold": "0.334",
+        "voting_period": "345600s"
+      },
+      "proposals": [],
+      "starting_proposal_id": "1",
+      "tally_params": null,
+      "votes": [],
+      "voting_params": null
+    },
+    "group": {
+      "group_members": [],
+      "group_policies": [],
+      "group_policy_seq": "0",
+      "group_seq": "0",
+      "groups": [],
+      "proposal_seq": "0",
+      "proposals": [],
+      "votes": []
+    },
+    "ibc": {
+      "channel_genesis": {
+        "ack_sequences": [],
+        "acknowledgements": [],
+        "channels": [],
+        "commitments": [],
+        "next_channel_sequence": "0",
+        "receipts": [],
+        "recv_sequences": [],
+        "send_sequences": []
+      },
+      "channel_v2_genesis": {
+        "acknowledgements": [],
+        "async_packets": [],
+        "commitments": [],
+        "receipts": [],
+        "send_sequences": []
+      },
+      "client_genesis": {
+        "clients": [],
+        "clients_consensus": [],
+        "clients_metadata": [],
+        "create_localhost": false,
+        "next_client_sequence": "0",
+        "params": {
+          "allowed_clients": [
+            "*"
+          ]
+        }
+      },
+      "client_v2_genesis": {
+        "counterparty_infos": []
+      },
+      "connection_genesis": {
+        "client_connection_paths": [],
+        "connections": [],
+        "next_connection_sequence": "0",
+        "params": {
+          "max_expected_time_per_block": "30000000000"
+        }
+      }
+    },
+    "interchainaccounts": {
+      "controller_genesis_state": {
+        "active_channels": [],
+        "interchain_accounts": [],
+        "params": {
+          "controller_enabled": true
+        },
+        "ports": []
+      },
+      "host_genesis_state": {
+        "active_channels": [],
+        "interchain_accounts": [],
+        "params": {
+          "allow_messages": [
+            "*"
+          ],
+          "host_enabled": true
+        },
+        "port": "icahost"
+      }
+    },
+    "mint": {
+      "minter": {
+        "annual_provisions": "0.000000000000000000",
+        "inflation": "0.130000000000000000"
+      },
+      "params": {
+        "blocks_per_year": "12614400",
+        "goal_bonded": "0.015",
+        "inflation_max": "0.01",
+        "inflation_min": "0.005",
+        "inflation_rate_change": "0.02",
+        "mint_denom": "uzig"
+      }
+    },
+    "nft": {
+      "classes": [],
+      "entries": []
+    },
+    "params": null,
+    "runtime": null,
+    "slashing": {
+      "missed_blocks": [],
+      "params": {
+        "downtime_jail_duration": "600s",
+        "min_signed_per_window": "0.05",
+        "signed_blocks_window": 35000,
+        "slash_fraction_double_sign": "0.0005",
+        "slash_fraction_downtime": "0.0001"
+      },
+      "signing_infos": []
+    },
+    "staking": {
+      "delegations": [],
+      "exported": false,
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "params": {
+        "bond_denom": "uzig",
+        "historical_entries": 10000,
+        "max_entries": 7,
+        "max_validators": 4,
+        "min_commission_rate": "0.0",
+        "unbonding_time": "1814400s"
+      },
+      "redelegations": [],
+      "unbonding_delegations": [],
+      "validators": []
+    },
+    "tokenwrapper": {
+      "client_id": "07-tendermint-0",
+      "decimal_difference": 12,
+      "denom": "waxlzig",
+      "enabled": true,
+      "operator_address": "zig1axsz0m9tls0gzsrm7h4gnr50nqfvfygpknjmqu",
+      "params": {},
+      "source_channel": "channel-0",
+      "source_port": "transfer",
+      "total_transferred_in": "0",
+      "total_transferred_out": "0"
+    },
+    "transfer": {
+      "denoms": [],
+      "params": {
+        "receive_enabled": true,
+        "send_enabled": true
+      },
+      "port_id": "transfer",
+      "total_escrowed": []
+    },
+    "upgrade": {},
+    "vesting": {},
+    "wasm": {
+      "codes": [],
+      "contracts": [],
+      "params": {
+        "code_upload_access": {
+          "addresses": [
+            "zig1vjfv368k3g4tn8qjtkvrv6mce6w06qhpje8fsd"
+          ],
+          "permission": "AnyOfAddresses"
+        },
+        "instantiate_default_permission": "Everybody"
+      },
+      "sequences": []
+    }
+  },
+  "consensus": {
+    "params": {
+      "block": {
+        "max_bytes": "22020096",
+        "max_gas": "-1"
+      },
+      "evidence": {
+        "max_age_num_blocks": "1209600",
+        "max_age_duration": "1814400000000000",
+        "max_bytes": "1048576"
+      },
+      "validator": {
+        "pub_key_types": [
+          "ed25519"
+        ]
+      },
+      "version": {
+        "app": "0"
+      },
+      "abci": {
+        "vote_extensions_enable_height": "0"
+      }
+    }
+  }
+}
