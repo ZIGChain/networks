@@ -1,1 +1,2 @@
 782836bc3631ccece23edb9aba62d927956f7c5c@seed0.zigchain.com:26656
+79b082fc208a8cd6baa0937490d15d587dc41484@seed1.zigchain.com:26656
