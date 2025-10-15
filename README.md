@@ -6,8 +6,8 @@ At any given time, there will be multiple active networks:
 
 | Network     | Status | Version (Binary Version) | Description                                                       |
 |-------------|--------|--------------------------|-------------------------------------------------------------------|
-| **mainnet** | ✔️     | v1 (1.2.2)               | The production-ready ZIGChain mainnet.                            |
-| **testnet** | ✔️     | v1 (1.2.2)               | The public ZIGChain testnet for developers and ecosystem testing. |
+| **mainnet** | ✔️     | v1 (1.2.3)               | The production-ready ZIGChain mainnet.                            |
+| **testnet** | ✔️     | v1 (1.2.3)               | The public ZIGChain testnet for developers and ecosystem testing. |
 
 Each network has a dedicated directory containing essential configuration details. These directories include:
 
