@@ -1,1 +1,2 @@
 dc9725eac15e7887a4b8deb4eddfbf4cf641778f@testnet-seed0.zigchain.com:26656
+82baad8e9ebc9c12df3b9fd74abae546a89acfcb@testnet-seed1.zigchain.com:26656
