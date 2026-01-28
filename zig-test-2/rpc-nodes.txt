@@ -1,2 +1,1 @@
 https://public-zigchain-testnet-rpc.numia.xyz
-https://rpc.zigchain.com

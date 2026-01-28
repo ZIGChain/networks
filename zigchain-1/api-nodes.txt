@@ -1,1 +1,2 @@
 https://public-zigchain-lcd.numia.xyz
+https://api.zigchain.com

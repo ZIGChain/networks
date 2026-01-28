@@ -1,1 +1,2 @@
 https://public-zigchain-rpc.numia.xyz
+https://rpc.zigchain.com
