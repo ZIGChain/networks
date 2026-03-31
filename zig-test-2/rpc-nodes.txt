@@ -1,1 +1,4 @@
 https://public-zigchain-testnet-rpc.numia.xyz
+https://testnet-rpc.zigchain.com
+https://zigchain-testnet-rpc.polkachu.com:443
+https://rpc-t.zigchain.nodestake.org:443

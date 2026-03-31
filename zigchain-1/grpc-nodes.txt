@@ -1,0 +1,2 @@
+grpc.zigchain.nodestake.org:443
+zigchain-grpc.polkachu.com:32890
