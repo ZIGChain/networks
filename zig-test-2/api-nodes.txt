@@ -1,2 +1,4 @@
 https://public-zigchain-testnet-lcd.numia.xyz
-https://api.zigchain.com
+https://testnet-api.zigchain.com/
+https://zigchain-testnet-api.polkachu.com
+https://api-t.zigchain.nodestake.org

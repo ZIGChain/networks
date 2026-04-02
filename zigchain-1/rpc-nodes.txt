@@ -1,2 +1,5 @@
 https://public-zigchain-rpc.numia.xyz
 https://rpc.zigchain.com
+https://zigchain-rpc.polkachu.com:443
+https://rpc.zigchain.nodestake.org:443
+https://zigchain-rpc.stakeandrelax.net

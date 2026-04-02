@@ -1,2 +1,4 @@
 782836bc3631ccece23edb9aba62d927956f7c5c@seed0.zigchain.com:26656
 79b082fc208a8cd6baa0937490d15d587dc41484@seed1.zigchain.com:26656
+ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:32856
+327fb4151de9f78f29ff10714085e347a4e3c836@rpc.zigchain.nodestake.org:666

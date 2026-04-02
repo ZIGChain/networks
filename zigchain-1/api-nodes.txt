@@ -1,2 +1,5 @@
 https://public-zigchain-lcd.numia.xyz
 https://api.zigchain.com
+https://zigchain-api.polkachu.com
+https://api.zigchain.nodestake.org
+https://zigchain-api.stakeandrelax.net
