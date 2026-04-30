@@ -20,6 +20,7 @@ Each network has a dedicated directory containing essential configuration detail
 | `rpc-nodes.txt`    | A list of available RPC node addresses.              |
 | `api-nodes.txt`    | A list of API (LCD) node addresses.                  |
 
+
 ## Usage
 
 The configuration details in this repository can be used to automate deployment and configuration tasks for ZIGChain.
@@ -72,6 +73,37 @@ curl -s "$ZIGCHAIN_NET/api-nodes.txt" | shuf -n 1
 ```
 
 By following this structure, developers and operators can easily integrate ZIGChain into their infrastructure and automation workflows.
+
+## Binaries
+
+Pre-built `zigchaind` binaries are published under `binaries/` at the repo root:
+
+| Path                                             | Description                                                          |
+|--------------------------------------------------|----------------------------------------------------------------------|
+| `binaries/zigchaind-vX.Y.Z-<os>-<arch>.tar.gz`   | Current release builds for the active mainnet/testnet version.       |
+| `binaries/SHA256SUMS-vX.Y.Z.txt`                 | SHA-256 checksums for the current release archives.                  |
+| `binaries/archive/`                              | Previous releases, kept for historical reference.                    |
+
+Supported platforms: `darwin-amd64`, `darwin-arm64`, `linux-amd64`.
+
+### Downloading a Binary
+
+```sh
+ZIGCHAIN_BINARIES="$ZIGCHAIN_NET_BASE/binaries"
+ZIGCHAIN_VERSION="$(curl -s "$ZIGCHAIN_NET/version.txt")"
+
+# Adjust for your platform
+PLATFORM="linux-amd64"
+
+curl -sL "$ZIGCHAIN_BINARIES/zigchaind-${ZIGCHAIN_VERSION}-${PLATFORM}.tar.gz" \
+  -o "zigchaind-${ZIGCHAIN_VERSION}.tar.gz"
+
+curl -sL "$ZIGCHAIN_BINARIES/SHA256SUMS-${ZIGCHAIN_VERSION}.txt" \
+  -o "SHA256SUMS-${ZIGCHAIN_VERSION}.txt"
+
+# Verify
+shasum -a 256 -c "SHA256SUMS-${ZIGCHAIN_VERSION}.txt" --ignore-missing
+```
 
 
 Note:
