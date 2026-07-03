@@ -1,0 +1,6 @@
+d2dc1454cf38bc755801259ef7a054e6b3712f258622eea40836941aedd0e09b  zigchaind-v4.1.0-darwin-amd64
+adb639e7e1496ec30de54f7dbcd8a8110548b95ca3b3b1d20ca65ec4ad2bfaa0  zigchaind-v4.1.0-darwin-amd64.tar.gz
+36df1d1bc504b8c270fdcb435a1b03b4b066888cdb1e5e23917da48c24f83931  zigchaind-v4.1.0-darwin-arm64
+a27cb748c8b4c90724378109e518fd730f8471d9e28fbea56bb963b3757fd6da  zigchaind-v4.1.0-darwin-arm64.tar.gz
+aa573015e72e4e859cd28b3bfceecfd8e265c328ad5f52c7f7bbe14c28d64953  zigchaind-v4.1.0-linux-amd64
+1a64152e48fb25c990bfcf52c0578171137470b78a79859e3c861714e099cd5e  zigchaind-v4.1.0-linux-amd64.tar.gz
