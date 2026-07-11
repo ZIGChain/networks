@@ -1,0 +1,6 @@
+e874a28fc5604a6db29ddc9c6a38c02ef754d52bff5af7890ea2ce165837bdab  zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64
+fd3498fb94ffdfcd9ebcf48c1ac6bbb9d28a7c58fb966ca4598b1cc81280a0ea  zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz
+7d4fb83c8e7193261ad0c08b35ad220642c0f0c7bac3a2c2f8e3f650bedc6b6c  zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64
+4cc41e9b8679f8d5616d3db78c2d6af58c8ae407ae2757a879e3b015ef92ad86  zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz
+fb21a27401a5a455ab673da7f1c783d63bf64670c3be69e63bcf27cf721668b1  zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64
+1ad456457e7c3004f22877396f56d43de01bae1fee5fcd2d21ebeefa308c0355  zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz
