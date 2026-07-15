@@ -106,5 +106,9 @@ shasum -a 256 -c "SHA256SUMS-${ZIGCHAIN_VERSION}.txt" --ignore-missing
 ```
 
 
-Note:
-This document is adapted for ZIGChain from the original work done by Mantra Chain Team on their [net repository](https://github.com/MANTRA-Chain/net).
+## Upgrades
+
+Per-upgrade documentation lives under [`upgrades/`](upgrades/) — one chain-neutral folder per upgrade with the impact summary, coordinates (heights, proposal, binaries), and operator/builder guides.
+
+
+Note: This document is adapted for ZIGChain from the original work done by Mantra Chain Team on their [net repository](https://github.com/MANTRA-Chain/net).
