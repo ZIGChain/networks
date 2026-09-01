@@ -37,21 +37,9 @@ Use these **`v5.0.0`** builds for the governance software-upgrade on mainnet and
 
 Full checksums: [`SHA256SUMS-v5.0.0.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/SHA256SUMS-v5.0.0.txt). The **authoritative** download URLs + checksums cosmovisor uses for auto-download will also live on-chain in the proposal's `plan.info`.
 
-### Release candidate — `v5.0.0-rc.1` (superseded)
-
-Earlier **`v5.0.0-rc.1`** release-candidate builds, kept for reference. Use **`v5.0.0`** above for production upgrades.
-
-| Platform | Download | SHA-256 |
-|----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.0.0-rc.1-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-linux-amd64.tar.gz) | `58c939364c9d390d21c69d114917f659b6648e437ad2a942df0929f2f833d91f` |
-| `darwin-arm64` | [zigchaind-v5.0.0-rc.1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-darwin-arm64.tar.gz) | `21fb6e315740b38af6d3f91979f39f7c780e8077428247930297dbf30915e899` |
-| `darwin-amd64` | [zigchaind-v5.0.0-rc.1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-darwin-amd64.tar.gz) | `819b8cc8009d3c46c95e6f9425c048efc3220390e777626ec11bf5c90da7ebc5` |
-
-Full checksums: [`SHA256SUMS-v5.0.0-rc.1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1.txt).
-
 ### QA build — `v5.0.0-rc.1-qa-m3off` (local testing only)
 
-Identical to **`v5.0.0-rc.1`** except the `in-place-testnet`-incompatible check is disabled. **For local testing only** — see the [local test guide](local-test-guide.md). Do not run on production or mainnet.
+A **stale release-candidate** build, kept solely for testing the upgrade against **mainnet data** on a local fork — see the [local test guide](local-test-guide.md). It is based on `v5.0.0-rc.1` (not the final `v5.0.0` release) and disables the `in-place-testnet`-incompatible check so the upgrade can complete offline. **Do not use on production, testnet, or mainnet.**
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
