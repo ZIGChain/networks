@@ -26,12 +26,12 @@ All binaries come from the [`ZIGChain/networks`](https://github.com/ZIGChain/net
 
 ## 2. Get the binaries
 
-You need **two** binaries from the `ZIGChain/networks` repo. Each version lives in its own folder under `binaries/<version>/`.
+You need **two** binaries from the `ZIGChain/networks` repo.
 
 | Purpose | Version | Folder |
 |---|---|---|
-| Load the mainnet snapshot & run Phase 1 | `v4.1.0` | `binaries/` (matches mainnet) |
-| Run the v5 upgrade in Phase 2 | `v5.0.0-rc.1-qa-m3off` | `binaries/v5.0.0-rc.1/` (testing build — see note) |
+| Load the mainnet snapshot & run Phase 1 | `v4.1.0` | `binaries/archive/` |
+| Run the v5 upgrade in Phase 2 | `v5.0.0-rc.1-qa-m3off` | `binaries/archive/v5.0.0-rc.1/` (stale testing build — see note) |
 
 > **Why a `-qa-m3off` build for Phase 2?** `in-place-testnet` replaces the real validator set with your single local validator. The production v5 binary enforces a strict *bonded-pool = Σ validator tokens* check that this substitution intentionally breaks, so the real release would halt. The `-qa-m3off` build disables **only** that one check so the upgrade can complete on a forked chain. **It is for local testing only — never run it on a real network.**
 
@@ -53,8 +53,8 @@ fetch() {  # <subdir> <version>
   mv "/tmp/zigchaind-$ver-$OS-$ARCH/zigchaind" "/tmp/zigchaind-$ver"
 }
 
-fetch "" v4.1.0
-fetch "v5.0.0-rc.1/" v5.0.0-rc.1-qa-m3off
+fetch "archive/" v4.1.0
+fetch "archive/v5.0.0-rc.1/" v5.0.0-rc.1-qa-m3off
 
 V41=/tmp/zigchaind-v4.1.0
 V5=/tmp/zigchaind-v5.0.0-rc.1-qa-m3off
