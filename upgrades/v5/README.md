@@ -17,7 +17,7 @@
 | Upgrade name | `v5` | `v5` |
 | Binary version | `v5.0.0` | `v5.0.0` |
 | Upgrade height | `7,669,200` | pending |
-| Cosmovisor height (`height − 1`) | `7,669,199` | pending |
+| Cosmovisor height (`height − 1`) | `7,669,200` | pending |
 | Proposal | `118` | pending |
 | Status | 🗳️ proposal submitted | ⏳ pending |
 
