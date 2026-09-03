@@ -16,10 +16,10 @@
 |-------|------------------------|------------------------|
 | Upgrade name | `v5` | `v5` |
 | Binary version | `v5.0.0` | `v5.0.0` |
-| Upgrade height | pending | pending |
-| Cosmovisor height (`height − 1`) | pending | pending |
-| Proposal | pending | pending |
-| Status | ⏳ pending | ⏳ pending |
+| Upgrade height | `7,669,200` | pending |
+| Cosmovisor height (`height − 1`) | `7,669,200` | pending |
+| Proposal | `118` | pending |
+| Status | 🗳️ proposal submitted | ⏳ pending |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time.
 
