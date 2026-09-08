@@ -7,7 +7,7 @@ At any given time, there will be multiple active networks:
 | Network     | Status | Version (Binary Version) | Description                                                       |
 |-------------|--------|--------------------------|-------------------------------------------------------------------|
 | **mainnet** | ✔️     | v4.1 (v4.1.0)             | The production-ready ZIGChain mainnet.                            |
-| **testnet** | ✔️     | v4.1 (v4.1.0)             | The public ZIGChain testnet for developers and ecosystem testing. |
+| **testnet** | ✔️     | v5 (v5.0.0-patch-1)       | The public ZIGChain testnet for developers and ecosystem testing. |
 
 Each network has a dedicated directory containing essential configuration details. These directories include:
 
@@ -76,13 +76,12 @@ By following this structure, developers and operators can easily integrate ZIGCh
 
 ## Binaries
 
-Pre-built `zigchaind` binaries are published under `binaries/` at the repo root:
+Pre-built `zigchaind` binaries are published under `binaries/` at the repo root, grouped by version:
 
-| Path                                             | Description                                                          |
-|--------------------------------------------------|----------------------------------------------------------------------|
-| `binaries/zigchaind-vX.Y.Z-<os>-<arch>.tar.gz`   | Current release builds for the active mainnet/testnet version.       |
-| `binaries/SHA256SUMS-vX.Y.Z.txt`                 | SHA-256 checksums for the current release archives.                  |
-| `binaries/archive/`                              | Previous releases, kept for historical reference.                    |
+| Path                                                          | Description                                                          |
+|---------------------------------------------------------------|----------------------------------------------------------------------|
+| `binaries/<version>/zigchaind-vX.Y.Z-<os>-<arch>.tar.gz`      | Release builds for that version.                                     |
+| `binaries/<version>/SHA256SUMS-vX.Y.Z.txt`                    | SHA-256 checksums for that version's archives.                       |
 
 Supported platforms: `darwin-amd64`, `darwin-arm64`, `linux-amd64`.
 
@@ -95,10 +94,10 @@ ZIGCHAIN_VERSION="$(curl -s "$ZIGCHAIN_NET/version.txt")"
 # Adjust for your platform
 PLATFORM="linux-amd64"
 
-curl -sL "$ZIGCHAIN_BINARIES/zigchaind-${ZIGCHAIN_VERSION}-${PLATFORM}.tar.gz" \
+curl -sL "$ZIGCHAIN_BINARIES/${ZIGCHAIN_VERSION}/zigchaind-${ZIGCHAIN_VERSION}-${PLATFORM}.tar.gz" \
   -o "zigchaind-${ZIGCHAIN_VERSION}.tar.gz"
 
-curl -sL "$ZIGCHAIN_BINARIES/SHA256SUMS-${ZIGCHAIN_VERSION}.txt" \
+curl -sL "$ZIGCHAIN_BINARIES/${ZIGCHAIN_VERSION}/SHA256SUMS-${ZIGCHAIN_VERSION}.txt" \
   -o "SHA256SUMS-${ZIGCHAIN_VERSION}.txt"
 
 # Verify
