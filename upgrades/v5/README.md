@@ -15,27 +15,27 @@
 | Field | Testnet (`zig-test-2`) | Mainnet (`zigchain-1`) |
 |-------|------------------------|------------------------|
 | Upgrade name | `v5` | `v5` |
-| Binary version | `v5.0.0` | `v5.0.0` |
-| Upgrade height | pending | pending |
-| Cosmovisor height (`height − 1`) | pending | pending |
+| Binary version | `v5.0.0-patch-1` | pending |
+| Upgrade height | `7,669,200` | pending |
+| Cosmovisor height | `7,669,200` | pending |
 | Proposal | pending | pending |
-| Status | ⏳ pending | ⏳ pending |
+| Status | ✅ done | ⏳ pending |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time.
 
 ## Binaries
 
-### Release — `v5.0.0`
+### Release — `v5.0.0-patch-1`
 
-Use these **`v5.0.0`** builds for the governance software-upgrade on mainnet and testnet.
+Use these **`v5.0.0-patch-1`** builds for the governance software-upgrade.
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.0.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/zigchaind-v5.0.0-linux-amd64.tar.gz) | `3cf12ad3d40e861d6d8302317fb42695d2994def3bd57cc64f69407a6c21e80d` |
-| `darwin-arm64` | [zigchaind-v5.0.0-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/zigchaind-v5.0.0-darwin-arm64.tar.gz) | `7cd3e5deeec6be8c959f11e295bb4f3dca0d7493e6dd23006774e9ebe4cb3714` |
-| `darwin-amd64` | [zigchaind-v5.0.0-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/zigchaind-v5.0.0-darwin-amd64.tar.gz) | `a7c4e675b70fb2d2023937491fc3cecc2d3e6fc22bc501d55151cf8f1743e51f` |
+| `linux-amd64` | [zigchaind-v5.0.0-patch-1-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-linux-amd64.tar.gz) | `002c1edb1db0f32ac16bc3faaa96438b1720f9330b2fca438108f19cd49586ee` |
+| `darwin-arm64` | [zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz) | `408972867f66ae17fcf6730c5e5c96432f2175a96a36d991b6e0f26d7fa567ef` |
+| `darwin-amd64` | [zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz) | `3b9dfc2cfd290fe2cf8e7a2f6ba6cff5f93f9a2f1fb1c2565ca27b17803e9b28` |
 
-Full checksums: [`SHA256SUMS-v5.0.0.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/SHA256SUMS-v5.0.0.txt). The **authoritative** download URLs + checksums cosmovisor uses for auto-download will also live on-chain in the proposal's `plan.info`.
+Full checksums: [`SHA256SUMS-v5.0.0-patch-1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/SHA256SUMS-v5.0.0-patch-1.txt). The **authoritative** download URLs + checksums cosmovisor uses for auto-download will also live on-chain in the proposal's `plan.info`.
 
 ### QA build — `v5.0.0-rc.1-qa-m3off` (local testing only)
 
@@ -43,11 +43,11 @@ A **stale release-candidate** build, kept solely for testing the upgrade against
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz) | `a9b029461ae5a456f6b40acd41ce5c90dbabe8aec2b5039ad8bb477aaefb4b5a` |
-| `darwin-arm64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz) | `0d7cb074fbd47672de410f77f642b32056ff9f0118f615b109135789bc165bba` |
-| `darwin-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz) | `81fc6b83210c6c4e07880b6522259fd7527aa4de9635c4e97d0185139f73099e` |
+| `linux-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz) | `a9b029461ae5a456f6b40acd41ce5c90dbabe8aec2b5039ad8bb477aaefb4b5a` |
+| `darwin-arm64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz) | `0d7cb074fbd47672de410f77f642b32056ff9f0118f615b109135789bc165bba` |
+| `darwin-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz) | `81fc6b83210c6c4e07880b6522259fd7527aa4de9635c4e97d0185139f73099e` |
 
-Full checksums: [`SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/archive/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt).
+Full checksums: [`SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt).
 
 ## Guides
 
