@@ -2,7 +2,7 @@
 
 **Coordinated binary upgrade for testnet and mainnet.** v4.2.0 is a security-hardening release: the Linux binary now ships as a static Position-Independent Executable so the OS can load it at a randomized base address. Validators must also have full ASLR enabled — **without ASLR this release provides no benefit.**
 
-> **Superseded.** v4.2.0 was the interim mitigation for the CosmWasm vulnerability disclosed 2026-09-03. v4.3.0 ships the actual upstream patch and is what mainnet runs today. This page is kept as the record of the v4.2 upgrade.
+> **Superseded.** v4.2.0 was the interim mitigation for the CosmWasm vulnerability disclosed 2026-09-03. [v4.3.0](../v4.3/README.md) ships the actual upstream patch and is what mainnet runs today. This page is kept as the record of the v4.2 upgrade.
 
 This release changes only how the binary is built and linked. There are **no state machine, module, or consensus changes**, and no migration to run.
 
