@@ -15,7 +15,7 @@
 | Field | Testnet (`zig-test-2`) | Mainnet (`zigchain-1`) |
 |-------|------------------------|------------------------|
 | Upgrade name | `v5` | `v5` |
-| Binary version | `v5.0.0-patch-1` | pending |
+| Binary version | `v5.0.0-patch-1` (upgrade ran on this) | `v5.1.0` |
 | Upgrade height | `7,669,200` | pending |
 | Cosmovisor height | `7,669,200` | pending |
 | Proposal | pending | pending |
@@ -25,9 +25,21 @@
 
 ## Binaries
 
-### Release — `v5.0.0-patch-1`
+### Release — `v5.1.0`
 
-Use these **`v5.0.0-patch-1`** builds for the governance software-upgrade.
+Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). The upgrade name stays `v5` and the height is unchanged.
+
+**Linux only.** The patched wasmvm tags publish no `libwasmvmstatic_darwin.a`, and building one requires compiling osxcross from source, so this release has no darwin build. macOS operators stay on `v5.0.0-patch-1` for local work and run `v5.1.0` on their Linux validators.
+
+| Platform | Download | SHA-256 |
+|----------|----------|---------|
+| `linux-amd64` | [zigchaind-v5.1.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/zigchaind-v5.1.0-linux-amd64.tar.gz) | `93f2be769ebafb369ed6fee03a0159ee6699e5aaae27d5ca165bc2b88b42d914` |
+
+Full checksums: [`SHA256SUMS-v5.1.0.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/SHA256SUMS-v5.1.0.txt). Built from `release/v5` at commit `3dd8a7ea24a62e92d16b6f094a34f27637e00cc5`; `zigchaind version --long` reports `v5.1.0` and `zigchaind query wasm libwasmvm-version` reports `2.3.5-rc.3`.
+
+### Superseded — `v5.0.0-patch-1`
+
+TestNet ran the v5 upgrade on these builds. Kept for the record, and as the last release with darwin artifacts.
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
