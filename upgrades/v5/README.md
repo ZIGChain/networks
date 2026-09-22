@@ -14,20 +14,22 @@
 
 | Field | Testnet (`zig-test-2`) | Mainnet (`zigchain-1`) |
 |-------|------------------------|------------------------|
-| Upgrade name | `v5` | `v5` |
-| Binary version | `v5.0.0-patch-1` (upgrade ran on this) | `v5.1.0` |
-| Upgrade height | `7,669,200` | pending |
-| Cosmovisor height | `7,669,200` | pending |
+| Upgrade name | `v5_1` | `v5` |
+| Binary version | `v5.1.0` | `v5.1.0` |
+| Upgrade height | pending | pending |
+| Cosmovisor height | pending | pending |
 | Proposal | pending | pending |
-| Status | ✅ done | ⏳ pending |
+| Status | ⏳ pending | ⏳ pending |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time.
+
+**Already applied on testnet.** The `v5` redenomination ran on `zig-test-2` at height `7,669,200` on `v5.0.0-patch-1`, so `v5` cannot be reused there. `v5_1` is the follow-up that moves testnet onto the patched CosmWasm runtime. Mainnet has not run `v5` yet and takes the redenomination and the patched runtime together, in one upgrade at the `v5` height.
 
 ## Binaries
 
 ### Release — `v5.1.0`
 
-Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). The upgrade name stays `v5` and the height is unchanged.
+Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). Mainnet runs them at the `v5` height; testnet, already redenominated, takes them under `v5_1`.
 
 **Linux only.** The patched wasmvm tags publish no `libwasmvmstatic_darwin.a`, and building one requires compiling osxcross from source, so this release has no darwin build. macOS operators stay on `v5.0.0-patch-1` for local work and run `v5.1.0` on their Linux validators.
 
