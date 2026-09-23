@@ -52,6 +52,16 @@ TestNet ran the v5 upgrade on these builds. Kept for the record, and as the last
 
 Full checksums: [`SHA256SUMS-v5.0.0-patch-1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/SHA256SUMS-v5.0.0-patch-1.txt). The **authoritative** download URLs + checksums cosmovisor uses for auto-download will also live on-chain in the proposal's `plan.info`.
 
+### QA build — `v5.1.0-qa` (local testing only)
+
+A **v5.1.0 build with the M3 staking-pool check disabled**, for rehearsing the upgrade against **mainnet data** on a local fork. `in-place-testnet` installs a single replacement validator and leaves the bonded-pool bank balance untouched, so `assertStakingPoolConsistency` fails for a reason unrelated to the migration and the run cannot complete. This binary skips that one check and logs the fact at `ERROR` on every upgrade run. Everything else matches `v5.1.0`. **Do not use on mainnet or testnet.**
+
+| Platform | Download | SHA-256 |
+|----------|----------|---------|
+| `linux-amd64` | [zigchaind-v5.1.0-qa-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/zigchaind-v5.1.0-qa-linux-amd64.tar.gz) | `704c1350c8976df86555537b94ce99e0a294b869245d70e882059995c2ffc7c0` |
+
+Full checksums: [`SHA256SUMS-v5.1.0-qa.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/SHA256SUMS-v5.1.0-qa.txt). Reports `v5.1.0-qa` from `zigchaind version`, built clean (`vcs.modified=false`) with `libwasmvm 2.3.5-rc.3`.
+
 ### QA build — `v5.0.0-rc.1-qa-m3off` (local testing only)
 
 A **stale release-candidate** build, kept solely for testing the upgrade against **mainnet data** on a local fork — see the [local test guide](local-test-guide.md). It is based on `v5.0.0-rc.1` (not the final `v5.0.0` release) and disables the `in-place-testnet`-incompatible check so the upgrade can complete offline. **Do not use on production, testnet, or mainnet.**
