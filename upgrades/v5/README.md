@@ -17,8 +17,8 @@
 | Mechanism | operator-set `halt-height` | governance software-upgrade |
 | Upgrade name | none | `v5` |
 | Binary version | `v5.1.0` | `v5.1.0` |
-| Halt / upgrade height | pending | pending |
-| Cosmovisor height | pending | pending |
+| Halt / upgrade height | **7,930,000** (~Fri 2026-09-25 08:57 UTC) | pending |
+| Cosmovisor height (`height − 1`) | **7,929,999** | pending |
 | Proposal | not applicable | pending |
 | Status | ⏳ pending | ⏳ pending |
 
@@ -88,7 +88,7 @@ In `~/.zigchain/config/app.toml`:
 
 ```toml
 # testnet (zig-test-2)
-halt-height = <halt height from the coordinates table>
+halt-height = 7930000
 ```
 
 Restart your node so the setting takes effect, or pass `--halt-height` on the command line.
@@ -99,7 +99,9 @@ Snapshot your `data/` directory and keep your **current binary**. That is your r
 
 ### At the halt height
 
-Your node commits the halt height, then stops gracefully.
+Your node commits the block *before* the halt height, then stops. The new binary produces the halt height itself.
+
+> **The stop looks like a crash, and that is expected.** CometBFT logs `CONSENSUS FAILURE!!!` with a panic stack, wrapping `halt per configuration height <halt height>`. That is how a configured halt is implemented; it is not a fault and no state is lost. Verified against a `zig-test-2` snapshot.
 
 ```bash
 # 1. stop the service if it is still running
