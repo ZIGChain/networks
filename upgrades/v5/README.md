@@ -8,28 +8,29 @@
 |----------|--------------|
 | **Exchanges / integrators** | Base denom is now `azig` with **18 decimals** (was `uzig`, 6). Update deposit/withdrawal accounting and display math accordingly. Nominal balances are unchanged — 1 ZIG stays 1 ZIG. |
 | **Builders / dApp devs** | Any code that hard-codes `uzig` or 6-decimal math must move to `azig` / 18 decimals. Test against real state first — see the [local test guide](local-test-guide.md). |
-| **Validators / node operators** | A standard governance software-upgrade at the coordinates below. |
+| **Validators / node operators** | Two different mechanisms: testnet is a coordinated `halt-height` binary swap, mainnet is a governance software-upgrade. See the coordinates below. |
 
 ## Coordinates
 
 | Field | Testnet (`zig-test-2`) | Mainnet (`zigchain-1`) |
 |-------|------------------------|------------------------|
-| Upgrade name | `v5.1` | `v5` |
+| Mechanism | operator-set `halt-height` | governance software-upgrade |
+| Upgrade name | none | `v5` |
 | Binary version | `v5.1.0` | `v5.1.0` |
-| Upgrade height | pending | pending |
+| Halt / upgrade height | pending | pending |
 | Cosmovisor height | pending | pending |
-| Proposal | pending | pending |
+| Proposal | not applicable | pending |
 | Status | ⏳ pending | ⏳ pending |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time.
 
-**Already applied on testnet.** The `v5` redenomination ran on `zig-test-2` at height `7,669,200` on `v5.0.0-patch-1`, so `v5` cannot be reused there. `v5.1` is the follow-up that moves testnet onto the patched CosmWasm runtime. Mainnet has not run `v5` yet and takes the redenomination and the patched runtime together, in one upgrade at the `v5` height.
+**Why the two differ.** The `v5` redenomination already ran on `zig-test-2` at height `7,669,200`, so testnet needs only the patched CosmWasm runtime. That swap changes no state and is not consensus-breaking, so testnet takes it as a coordinated `halt-height` restart: no plan name, no proposal, and no upgrade handler is involved. Mainnet has not run `v5` yet and takes the redenomination and the patched runtime together, in one governance upgrade at the `v5` height.
 
 ## Binaries
 
 ### Release — `v5.1.0`
 
-Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). Mainnet runs them at the `v5` height; testnet, already redenominated, takes them under `v5.1`.
+Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). Mainnet runs them at the `v5` governance height; testnet, already redenominated, takes them as a `halt-height` swap.
 
 **Linux only.** The patched wasmvm tags publish no `libwasmvmstatic_darwin.a`, and building one requires compiling osxcross from source, so this release has no darwin build. macOS operators stay on `v5.0.0-patch-1` for local work and run `v5.1.0` on their Linux validators.
 
@@ -62,6 +63,75 @@ A **stale release-candidate** build, kept solely for testing the upgrade against
 | `darwin-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz) | `81fc6b83210c6c4e07880b6522259fd7527aa4de9635c4e97d0185139f73099e` |
 
 Full checksums: [`SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt).
+
+## Testnet — halt-height swap to `v5.1.0`
+
+No governance proposal is submitted for this one. Every operator stops at an agreed height, swaps the binary and restarts.
+
+> ⚠️ **The binary does not halt on its own.** There is no coded fork and no upgrade plan at this height. Your node only stops if **you** configure `halt-height`, or register the swap with cosmovisor at the cosmovisor height.
+
+### 1. Verify what you downloaded
+
+```bash
+sha256sum zigchaind-v5.1.0-linux-amd64.tar.gz
+# compare against the table above
+
+tar xzf zigchaind-v5.1.0-linux-amd64.tar.gz
+./zigchaind version                   # expect: v5.1.0
+```
+
+Keep it staged alongside your current binary. Do not replace anything yet.
+
+### 2. Set your halt height
+
+In `~/.zigchain/config/app.toml`:
+
+```toml
+# testnet (zig-test-2)
+halt-height = <halt height from the coordinates table>
+```
+
+Restart your node so the setting takes effect, or pass `--halt-height` on the command line.
+
+### 3. Back up
+
+Snapshot your `data/` directory and keep your **current binary**. That is your rollback path.
+
+### At the halt height
+
+Your node commits the halt height, then stops gracefully.
+
+```bash
+# 1. stop the service if it is still running
+sudo systemctl stop zigchaind
+
+# 2. swap in the new binary
+sudo install -m 0755 ./zigchaind $(which zigchaind)
+zigchaind version                     # expect: v5.1.0
+
+# 3. REMOVE the halt height  <-- do not skip this
+#    set halt-height = 0 in app.toml, or drop the --halt-height flag.
+#    If you leave it set, your node halts again immediately on start.
+
+# 4. restart
+sudo systemctl start zigchaind
+```
+
+### Verify after restart
+
+```bash
+zigchaind version                                      # v5.1.0
+zigchaind query wasm libwasmvm-version                 # 2.3.5-rc.3
+curl -s localhost:26657/status | jq '.result.sync_info.latest_block_height'
+```
+
+Confirm your node is signing and blocks are advancing.
+
+### Rollback
+
+Restore your previous binary, set `halt-height = 0`, and restart.
+
+Rolling back is **safe** here, unlike v4.3.0. Only the compiled CosmWasm library changes between `v5.0.0-patch-1` and `v5.1.0`, so the two interoperate and a rolled-back node does not diverge. Report the problem so the team can help.
 
 ## Guides
 
