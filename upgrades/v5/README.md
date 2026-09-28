@@ -17,12 +17,12 @@
 | Mechanism | operator-set `halt-height` | governance software-upgrade |
 | Upgrade name | none | `v5` |
 | Binary version | `v5.1.0` | `v5.1.0` |
-| Halt / upgrade height | **7,930,000** (Fri 2026-09-25 08:57 UTC) | **12,549,000** (~Wed 2026-09-30 10:00–11:00 UTC) |
+| Halt / upgrade height | **7,930,000** (Fri 2026-09-25 08:57 UTC) | **12,549,000** (~Wed 2026-09-30 09:00 UTC) |
 | Cosmovisor height (`height − 1`) | **7,929,999** | not applicable, cosmovisor switches on the `v5` plan |
 | Proposal | not applicable | [#41](https://explorer.nodestake.org/zigchain/gov/41), voting ends Tue 2026-09-29 11:00 UTC |
 | Status | ✅ done, running `v5.1.0` | 🗳️ voting |
 
-> Heights and proposal links are filled in as each stage is reached — never guessed ahead of time. The **height is authoritative**; the mainnet time is an estimate from the current block rate (~3.22–3.28 s per block) and will drift. Countdown: [block 12,549,000](https://explorer.nodestake.org/zigchain/block/12549000).
+> Heights and proposal links are filled in as each stage is reached — never guessed ahead of time. The **height is authoritative**; the mainnet time is an estimate from the current block rate (~3.17 s per block) and will drift. Countdown: [block 12,549,000](https://explorer.nodestake.org/zigchain/block/12549000).
 
 **Why the two differ.** The `v5` redenomination already ran on `zig-test-2` at height `7,669,200`, so testnet needs only the patched CosmWasm runtime. That swap changes no state and is not consensus-breaking, so testnet takes it as a coordinated `halt-height` restart: no plan name, no proposal, and no upgrade handler is involved. Mainnet has not run `v5` yet and takes the redenomination and the patched runtime together, in one governance upgrade at the `v5` height.
 
