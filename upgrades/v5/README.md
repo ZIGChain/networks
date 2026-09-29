@@ -28,6 +28,18 @@
 
 ## Binaries
 
+### Latest — `v5.1.1`
+
+Same code as `v5.1.0`, built against the public CosmWasm tags (`wasmd v0.60.9`, `wasmvm v2.3.5`) now that the embargo has ended. Upstream confirms they carry the same fix as the `-rc.3` tags in `v5.1.0`. Only the compiled library changes, so `v5.1.0` and `v5.1.1` nodes interoperate: swap one node at a time, with no halt height, no proposal and no coordination. It is not urgent. darwin builds are back.
+
+| Platform | Download | SHA-256 |
+|----------|----------|---------|
+| `linux-amd64` | [zigchaind-v5.1.1-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-linux-amd64.tar.gz) | `03d46cf891c2d466bfa91e228521914f2ddf9bb043ab74f3702803a50498e4ea` |
+| `darwin-amd64` | [zigchaind-v5.1.1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-darwin-amd64.tar.gz) | `02f2a4e5ca5e39c28a0ea166f5e66de8ae37f7f9289192fd95c56586039bba39` |
+| `darwin-arm64` | [zigchaind-v5.1.1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-darwin-arm64.tar.gz) | `1067267ffb866c95d0492bb225559f8fa3bb962d616030b8e86031abbf0135e1` |
+
+Full checksums: [`SHA256SUMS-v5.1.1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/SHA256SUMS-v5.1.1.txt). Built from the `v5.1.1` tag on GitHub Public (`ZIGChain/zigchain` commit `4b75028fdd2fdb79e6126ea83bb8b1ef4867351e`). `zigchaind version --long` reports `v5.1.1`, `wasmd v0.60.9` and `wasmvm v2.3.5`.
+
 ### Release — `v5.1.0`
 
 Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). Mainnet runs them at the `v5` governance height; testnet, already redenominated, takes them as a `halt-height` swap.
