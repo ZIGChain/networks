@@ -28,17 +28,17 @@
 
 ## Binaries
 
-### Latest — `v5.2.0`
+### Latest — `v5.1.1`
 
-Same code as `v5.1.0`, built against the public CosmWasm tags (`wasmd v0.60.9`, `wasmvm v2.3.5`) now that the embargo has ended. Upstream confirms they carry the same fix as the `-rc.3` tags in `v5.1.0`. Only the compiled library changes, so `v5.1.0` and `v5.2.0` nodes interoperate: swap one node at a time, with no halt height, no proposal and no coordination. It is not urgent. darwin builds are back.
+Same code as `v5.1.0`, built against the public CosmWasm tags (`wasmd v0.60.9`, `wasmvm v2.3.5`) now that the embargo has ended. Upstream confirms they carry the same fix as the `-rc.3` tags in `v5.1.0`. Only the compiled library changes, so `v5.1.0` and `v5.1.1` nodes interoperate: swap one node at a time, with no halt height, no proposal and no coordination. It is not urgent. darwin builds are back.
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.2.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.2.0/zigchaind-v5.2.0-linux-amd64.tar.gz) | `85d3856fb971fa486d145ba4f326337ec736ab1894bac488ba732cda759725c1` |
-| `darwin-amd64` | [zigchaind-v5.2.0-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.2.0/zigchaind-v5.2.0-darwin-amd64.tar.gz) | `528e040a67447f1bb1f97d9fc22aa3eb62f4e375b1f46423c7b2b972208edbbd` |
-| `darwin-arm64` | [zigchaind-v5.2.0-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.2.0/zigchaind-v5.2.0-darwin-arm64.tar.gz) | `45a5c55e1680f158690e3270f5b831f96f3804ed6a3078fbef0b0cc27ce23250` |
+| `linux-amd64` | [zigchaind-v5.1.1-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-linux-amd64.tar.gz) | `03d46cf891c2d466bfa91e228521914f2ddf9bb043ab74f3702803a50498e4ea` |
+| `darwin-amd64` | [zigchaind-v5.1.1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-darwin-amd64.tar.gz) | `02f2a4e5ca5e39c28a0ea166f5e66de8ae37f7f9289192fd95c56586039bba39` |
+| `darwin-arm64` | [zigchaind-v5.1.1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-darwin-arm64.tar.gz) | `1067267ffb866c95d0492bb225559f8fa3bb962d616030b8e86031abbf0135e1` |
 
-Full checksums: [`SHA256SUMS-v5.2.0.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.2.0/SHA256SUMS-v5.2.0.txt). Built from the `v5.2.0` tag on GitHub Public (`ZIGChain/zigchain` commit `24ffec551181340e103fa74ed0c55224c9a0aee4`). `zigchaind version --long` reports `v5.2.0`, `wasmd v0.60.9` and `wasmvm v2.3.5`.
+Full checksums: [`SHA256SUMS-v5.1.1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/SHA256SUMS-v5.1.1.txt). Built from the `v5.1.1` tag on GitHub Public (`ZIGChain/zigchain` commit `4b75028fdd2fdb79e6126ea83bb8b1ef4867351e`). `zigchaind version --long` reports `v5.1.1`, `wasmd v0.60.9` and `wasmvm v2.3.5`.
 
 ### Release — `v5.1.0`
 
