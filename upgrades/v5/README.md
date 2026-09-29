@@ -17,12 +17,12 @@
 | Mechanism | operator-set `halt-height` | governance software-upgrade |
 | Upgrade name | none | `v5` |
 | Binary version | `v5.1.0` | `v5.1.0` |
-| Halt / upgrade height | **7,930,000** (~Fri 2026-09-25 08:57 UTC) | pending |
-| Cosmovisor height (`height − 1`) | **7,929,999** | pending |
-| Proposal | not applicable | pending |
-| Status | ⏳ pending | ⏳ pending |
+| Halt / upgrade height | **7,930,000** (Fri 2026-09-25 08:57 UTC) | **12,549,000** (~Wed 2026-09-30 09:00 UTC) |
+| Cosmovisor height (`height − 1`) | **7,929,999** | not applicable, cosmovisor switches on the `v5` plan |
+| Proposal | not applicable | [#41](https://explorer.nodestake.org/zigchain/gov/41), voting ends Tue 2026-09-29 11:00 UTC |
+| Status | ✅ done, running `v5.1.0` | 🗳️ voting |
 
-> Heights and proposal links are filled in as each stage is reached — never guessed ahead of time.
+> Heights and proposal links are filled in as each stage is reached — never guessed ahead of time. The **height is authoritative**; the mainnet time is an estimate from the current block rate (~3.17 s per block) and will drift. Countdown: [block 12,549,000](https://explorer.nodestake.org/zigchain/block/12549000).
 
 **Why the two differ.** The `v5` redenomination already ran on `zig-test-2` at height `7,669,200`, so testnet needs only the patched CosmWasm runtime. That swap changes no state and is not consensus-breaking, so testnet takes it as a coordinated `halt-height` restart: no plan name, no proposal, and no upgrade handler is involved. Mainnet has not run `v5` yet and takes the redenomination and the patched runtime together, in one governance upgrade at the `v5` height.
 
@@ -40,6 +40,8 @@ Use these **`v5.1.0`** builds for the governance software-upgrade. They supersed
 
 Full checksums: [`SHA256SUMS-v5.1.0.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/SHA256SUMS-v5.1.0.txt). Built from `release/v5` at commit `3dd8a7ea24a62e92d16b6f094a34f27637e00cc5`; `zigchaind version --long` reports `v5.1.0` and `zigchaind query wasm libwasmvm-version` reports `2.3.5-rc.3`.
 
+Proposal #41's `plan.info` carries this same URL and SHA-256, which is what cosmovisor uses for auto-download.
+
 ### Superseded — `v5.0.0-patch-1`
 
 TestNet ran the v5 upgrade on these builds. Kept for the record, and as the last release with darwin artifacts.
@@ -50,7 +52,7 @@ TestNet ran the v5 upgrade on these builds. Kept for the record, and as the last
 | `darwin-arm64` | [zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz) | `408972867f66ae17fcf6730c5e5c96432f2175a96a36d991b6e0f26d7fa567ef` |
 | `darwin-amd64` | [zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz) | `3b9dfc2cfd290fe2cf8e7a2f6ba6cff5f93f9a2f1fb1c2565ca27b17803e9b28` |
 
-Full checksums: [`SHA256SUMS-v5.0.0-patch-1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/SHA256SUMS-v5.0.0-patch-1.txt). The **authoritative** download URLs + checksums cosmovisor uses for auto-download will also live on-chain in the proposal's `plan.info`.
+Full checksums: [`SHA256SUMS-v5.0.0-patch-1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/SHA256SUMS-v5.0.0-patch-1.txt).
 
 ### QA build — `v5.0.0-rc.1-qa-m3off` (local testing only)
 
@@ -64,7 +66,56 @@ A **stale release-candidate** build, kept solely for testing the upgrade against
 
 Full checksums: [`SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt).
 
-## Testnet — halt-height swap to `v5.1.0`
+## Mainnet — governance upgrade to `v5`
+
+Proposal [#41](https://explorer.nodestake.org/zigchain/gov/41) schedules the `v5` plan at height **12,549,000**. This one is a coded upgrade, so the flow is the reverse of testnet: **do not set `halt-height`**. The running `v5.0.0` binary stops on its own at the upgrade height.
+
+### 1. Vote
+
+Validators vote before Tue 2026-09-29 11:00 UTC:
+
+```bash
+zigchaind tx gov vote 41 yes --from <your-key> --chain-id zigchain-1 --fees <fee>
+```
+
+### 2. Stage the binary
+
+Verify it as in [step 1 of the testnet section](#1-verify-what-you-downloaded) (same tarball, same SHA-256), then:
+
+- **Cosmovisor:** place it at `$DAEMON_HOME/cosmovisor/upgrades/v5/bin/zigchaind`. The directory name must be the plan name `v5`, not `v5.1.0`. With `DAEMON_ALLOW_DOWNLOAD_BINARIES=true` cosmovisor fetches it from `plan.info` instead, but staging it yourself removes the dependency on GitHub at halt time.
+- **Manual:** keep it staged next to your current binary. Do not replace anything yet.
+
+Snapshot your `data/` directory before the height.
+
+### At the upgrade height
+
+Your node logs `UPGRADE "v5" NEEDED at height: 12549000` and stops. Cosmovisor swaps and restarts by itself. Manually:
+
+```bash
+sudo systemctl stop zigchaind
+sudo install -m 0755 ./zigchaind $(which zigchaind)
+zigchaind version                     # expect: v5.1.0
+sudo systemctl start zigchaind
+```
+
+The first `v5.1.0` block runs the redenomination migration, so it can take noticeably longer than a normal block. Let it finish; do not restart mid-migration.
+
+### Verify after restart
+
+```bash
+zigchaind version                                      # v5.1.0
+zigchaind query wasm libwasmvm-version                 # 2.3.5-rc.3
+zigchaind query staking params -o json | jq -r .params.bond_denom   # azig
+curl -s localhost:26657/status | jq '.result.sync_info.latest_block_height'
+```
+
+Confirm your node is signing and blocks are advancing.
+
+### Rollback
+
+**Not possible by swapping binaries.** The upgrade migrates state (`uzig` → `azig`), so `v5.0.0` cannot run past height 12,549,000 and stops again with the same `UPGRADE NEEDED` panic. Recovery before the chain moves on means restoring your snapshot, coordinated with the team. Do not use `--unsafe-skip-upgrades` on your own; that forks your node off the network.
+
+## Testnet — halt-height swap to `v5.1.0` (done 2026-09-25)
 
 No governance proposal is submitted for this one. Every operator stops at an agreed height, swaps the binary and restarts.
 
