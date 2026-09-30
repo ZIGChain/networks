@@ -28,8 +28,6 @@
 
 ## Binaries
 
-### Latest — `v5.1.2`
-
 **Required on MainNet to recover from the halt at 12,549,000.** Same v5 state machine as `v5.1.0` / `v5.1.1`, plus the fix for the oversized upgrade block and a built-in `state.db` repair. Follow the [recovery steps](#mainnet--recovery-from-the-halt-at-12549000-v512). TestNet does not need it: it already ran `v5`, and the repair is a no-op on a healthy node.
 
 | Platform | Download | SHA-256 |
@@ -39,56 +37,6 @@
 | `darwin-arm64` | [zigchaind-v5.1.2-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/zigchaind-v5.1.2-darwin-arm64.tar.gz) | `34a28984a081bc990b6a1db1ece8bf06c07d9bf55afe51867148e0bdfeadf297` |
 
 Full checksums: [`SHA256SUMS-v5.1.2.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/SHA256SUMS-v5.1.2.txt). Built from commit `2de3c0f4d637efd187c373f17e30ac534ca308a0`. `zigchaind version --long` reports `v5.1.2`.
-
-### Previous — `v5.1.1`
-
-Same code as `v5.1.0`, built against the public CosmWasm tags (`wasmd v0.60.9`, `wasmvm v2.3.5`) now that the embargo has ended. Upstream confirms they carry the same fix as the `-rc.3` tags in `v5.1.0`. Only the compiled library changes, so `v5.1.0` and `v5.1.1` nodes interoperate: swap one node at a time, with no halt height, no proposal and no coordination. It is not urgent. darwin builds are back.
-
-| Platform | Download | SHA-256 |
-|----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.1.1-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-linux-amd64.tar.gz) | `03d46cf891c2d466bfa91e228521914f2ddf9bb043ab74f3702803a50498e4ea` |
-| `darwin-amd64` | [zigchaind-v5.1.1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-darwin-amd64.tar.gz) | `02f2a4e5ca5e39c28a0ea166f5e66de8ae37f7f9289192fd95c56586039bba39` |
-| `darwin-arm64` | [zigchaind-v5.1.1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/zigchaind-v5.1.1-darwin-arm64.tar.gz) | `1067267ffb866c95d0492bb225559f8fa3bb962d616030b8e86031abbf0135e1` |
-
-Full checksums: [`SHA256SUMS-v5.1.1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.1/SHA256SUMS-v5.1.1.txt). Built from the `v5.1.1` tag on GitHub Public (`ZIGChain/zigchain` commit `4b75028fdd2fdb79e6126ea83bb8b1ef4867351e`). `zigchaind version --long` reports `v5.1.1`, `wasmd v0.60.9` and `wasmvm v2.3.5`.
-
-### Release — `v5.1.0`
-
-Use these **`v5.1.0`** builds for the governance software-upgrade. They supersede `v5.0.0-patch-1`: same v5 state machine, plus the patched CosmWasm runtime (`wasmd v0.60.9-rc.3`, `wasmvm v2.3.5-rc.3`). Mainnet runs them at the `v5` governance height; testnet, already redenominated, takes them as a `halt-height` swap.
-
-**Linux only.** The patched wasmvm tags publish no `libwasmvmstatic_darwin.a`, and building one requires compiling osxcross from source, so this release has no darwin build. macOS operators stay on `v5.0.0-patch-1` for local work and run `v5.1.0` on their Linux validators.
-
-| Platform | Download | SHA-256 |
-|----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.1.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/zigchaind-v5.1.0-linux-amd64.tar.gz) | `93f2be769ebafb369ed6fee03a0159ee6699e5aaae27d5ca165bc2b88b42d914` |
-
-Full checksums: [`SHA256SUMS-v5.1.0.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/SHA256SUMS-v5.1.0.txt). Built from `release/v5` at commit `3dd8a7ea24a62e92d16b6f094a34f27637e00cc5`; `zigchaind version --long` reports `v5.1.0` and `zigchaind query wasm libwasmvm-version` reports `2.3.5-rc.3`.
-
-Proposal #41's `plan.info` carries this same URL and SHA-256, which is what cosmovisor uses for auto-download.
-
-### Superseded — `v5.0.0-patch-1`
-
-TestNet ran the v5 upgrade on these builds. Kept for the record, and as the last release with darwin artifacts.
-
-| Platform | Download | SHA-256 |
-|----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.0.0-patch-1-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-linux-amd64.tar.gz) | `002c1edb1db0f32ac16bc3faaa96438b1720f9330b2fca438108f19cd49586ee` |
-| `darwin-arm64` | [zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz) | `408972867f66ae17fcf6730c5e5c96432f2175a96a36d991b6e0f26d7fa567ef` |
-| `darwin-amd64` | [zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz) | `3b9dfc2cfd290fe2cf8e7a2f6ba6cff5f93f9a2f1fb1c2565ca27b17803e9b28` |
-
-Full checksums: [`SHA256SUMS-v5.0.0-patch-1.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-patch-1/SHA256SUMS-v5.0.0-patch-1.txt).
-
-### QA build — `v5.0.0-rc.1-qa-m3off` (local testing only)
-
-A **stale release-candidate** build, kept solely for testing the upgrade against **mainnet data** on a local fork — see the [local test guide](local-test-guide.md). It is based on `v5.0.0-rc.1` (not the final `v5.0.0` release) and disables the `in-place-testnet`-incompatible check so the upgrade can complete offline. **Do not use on production, testnet, or mainnet.**
-
-| Platform | Download | SHA-256 |
-|----------|----------|---------|
-| `linux-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-linux-amd64.tar.gz) | `a9b029461ae5a456f6b40acd41ce5c90dbabe8aec2b5039ad8bb477aaefb4b5a` |
-| `darwin-arm64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-arm64.tar.gz) | `0d7cb074fbd47672de410f77f642b32056ff9f0118f615b109135789bc165bba` |
-| `darwin-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz) | `81fc6b83210c6c4e07880b6522259fd7527aa4de9635c4e97d0185139f73099e` |
-
-Full checksums: [`SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt).
 
 ## Mainnet — recovery from the halt at 12,549,000 (`v5.1.2`)
 
@@ -134,7 +82,7 @@ free -g; df -h ~/.zigchain
 
 ### 2. Download and verify `v5.1.2`
 
-The files are also listed in the [`v5.1.2` table above](#latest--v512).
+The files are also listed in the [Binaries](#binaries) table.
 
 ```bash
 mkdir -p ~/v5.1.2 && cd ~/v5.1.2
@@ -299,7 +247,7 @@ No governance proposal is submitted for this one. Every operator stops at an agr
 
 ```bash
 sha256sum zigchaind-v5.1.0-linux-amd64.tar.gz
-# compare against the table above
+# compare against https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.0/SHA256SUMS-v5.1.0.txt
 
 tar xzf zigchaind-v5.1.0-linux-amd64.tar.gz   # extracts into zigchaind-v5.1.0-linux-amd64/
 cd zigchaind-v5.1.0-linux-amd64
