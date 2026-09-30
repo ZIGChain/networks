@@ -16,11 +16,11 @@
 |-------|------------------------|------------------------|
 | Mechanism | operator-set `halt-height` | governance software-upgrade |
 | Upgrade name | none | `v5` |
-| Binary version | `v5.1.0` | `v5.1.0` |
+| Binary version | `v5.1.0` | `v5.1.0`, recovery on `v5.1.2` |
 | Halt / upgrade height | **7,930,000** (Fri 2026-09-25 08:57 UTC) | **12,549,000** (~Wed 2026-09-30 09:00 UTC) |
 | Cosmovisor height (`height − 1`) | **7,929,999** | not applicable, cosmovisor switches on the `v5` plan |
 | Proposal | not applicable | [#41](https://explorer.nodestake.org/zigchain/gov/41), voting ends Tue 2026-09-29 11:00 UTC |
-| Status | ✅ done, running `v5.1.0` | 🗳️ voting |
+| Status | ✅ done, running `v5.1.0` | ⛔ halted at 12,549,000, recover with [`v5.1.2`](#mainnet--recovery-from-the-halt-at-12549000-v512) |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time. The **height is authoritative**; the mainnet time is an estimate from the current block rate (~3.17 s per block) and will drift. Countdown: [block 12,549,000](https://explorer.nodestake.org/zigchain/block/12549000).
 
@@ -28,7 +28,19 @@
 
 ## Binaries
 
-### Latest — `v5.1.1`
+### Latest — `v5.1.2`
+
+**Required on MainNet to recover from the halt at 12,549,000.** Same v5 state machine as `v5.1.0` / `v5.1.1`, plus the fix for the oversized upgrade block and a built-in `state.db` repair. Follow the [recovery steps](#mainnet--recovery-from-the-halt-at-12549000-v512). TestNet does not need it: it already ran `v5`, and the repair is a no-op on a healthy node.
+
+| Platform | Download | SHA-256 |
+|----------|----------|---------|
+| `linux-amd64` | [zigchaind-v5.1.2-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/zigchaind-v5.1.2-linux-amd64.tar.gz) | `409ea0cc283f6fa90fcda32ae346a539e8eef99bd67ae8fa5176190de46f9c52` |
+| `darwin-amd64` | [zigchaind-v5.1.2-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/zigchaind-v5.1.2-darwin-amd64.tar.gz) | `e4c6aad1a6ec5f90285dc107c43febc7874ca8321bf8b7c590eb712d4abe7a68` |
+| `darwin-arm64` | [zigchaind-v5.1.2-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/zigchaind-v5.1.2-darwin-arm64.tar.gz) | `34a28984a081bc990b6a1db1ece8bf06c07d9bf55afe51867148e0bdfeadf297` |
+
+Full checksums: [`SHA256SUMS-v5.1.2.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/SHA256SUMS-v5.1.2.txt). Built from commit `2de3c0f4d637efd187c373f17e30ac534ca308a0`. `zigchaind version --long` reports `v5.1.2`.
+
+### Previous — `v5.1.1`
 
 Same code as `v5.1.0`, built against the public CosmWasm tags (`wasmd v0.60.9`, `wasmvm v2.3.5`) now that the embargo has ended. Upstream confirms they carry the same fix as the `-rc.3` tags in `v5.1.0`. Only the compiled library changes, so `v5.1.0` and `v5.1.1` nodes interoperate: swap one node at a time, with no halt height, no proposal and no coordination. It is not urgent. darwin builds are back.
 
@@ -77,6 +89,141 @@ A **stale release-candidate** build, kept solely for testing the upgrade against
 | `darwin-amd64` | [zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/zigchaind-v5.0.0-rc.1-qa-m3off-darwin-amd64.tar.gz) | `81fc6b83210c6c4e07880b6522259fd7527aa4de9635c4e97d0185139f73099e` |
 
 Full checksums: [`SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt`](https://github.com/ZIGChain/networks/raw/main/binaries/v5.0.0-rc.1/SHA256SUMS-v5.0.0-rc.1-qa-m3off.txt).
+
+## Mainnet — recovery from the halt at 12,549,000 (`v5.1.2`)
+
+`zigchain-1` halted at the `v5` upgrade height, **12,549,000**, and nodes on goleveldb (the default backend) could not restart. They panic opening CometBFT's `state.db`:
+
+```
+panic: snappy: decoded block is too large
+```
+
+The `v5` handler emitted bank events for every balance it migrated, which made the upgrade block's FinalizeBlock response 3,788,334,043 bytes. goleveldb cannot store a value that size, so every start, and `zigchaind rollback`, panics the same way.
+
+`v5.1.2` fixes both sides:
+
+- **The handler** keeps only its own `v5_*` events, so a node that replays the upgrade block stores a response of a few hundred bytes.
+- **The node** repairs `state.db` before `start`: it strips the oversized events from the stored response, completes an interrupted write if the node crashed between CometBFT's two writes, and compacts the old versions away. The same repair is available as `zigchaind repair-state-db`, which prints what it checked. It is a no-op on a healthy database and on non-goleveldb backends.
+
+`v5.1.2` runs the same v5 state machine as `v5.1.0` / `v5.1.1`. It is **not** a new upgrade: no proposal, no new height, and the upgrade name stays `v5`. Block-level events are in neither the app hash nor the header's `LastResultsHash`, so dropping them changes no state and no header field. The only visible difference is that `/block_results?height=12549000` lists only the `v5_*` events.
+
+The chain resumes once validators with more than two-thirds of the voting power are back. Everyone on `zigchain-1` needs this.
+
+### Before you start
+
+- **Free RAM: about 18 GB.** The repair holds the 3.79 GB value several times while goleveldb replays its journal. Measured peak: 17.9 GiB. Add temporary swap if the machine has less.
+- **Free disk: about 10 GB**, plus room for the backups below.
+- **Stop the node** so systemd or cosmovisor does not restart it in a loop.
+- **Do not** start `v5.1.0` or `v5.1.1` again, use `--unsafe-skip-upgrades`, delete `data/`, or restore an old `priv_validator_state.json`.
+
+The steps assume the home is `~/.zigchain` and the service is `zigchaind`. Adjust if yours differ.
+
+### 1. Stop and back up
+
+```bash
+sudo systemctl stop zigchaind
+systemctl is-active zigchaind                 # must be "inactive"
+
+cp -a ~/.zigchain/data/state.db ~/state.db.bak-12549000
+cp -a ~/.zigchain/data/priv_validator_state.json ~/priv_validator_state.json.bak
+free -g; df -h ~/.zigchain
+```
+
+### 2. Download and verify `v5.1.2`
+
+Download the tarball and `SHA256SUMS-v5.1.2.txt` from the [`v5.1.2` table above](#latest--v512), then:
+
+```bash
+sha256sum -c SHA256SUMS-v5.1.2.txt --ignore-missing
+tar xzf zigchaind-v5.1.2-linux-amd64.tar.gz
+./zigchaind version                           # v5.1.2
+```
+
+### 3. Run the repair and read its output
+
+```bash
+./zigchaind repair-state-db --home ~/.zigchain
+```
+
+It takes a minute or two on an affected node. Every line starts with `state.db repair:`. Find your case:
+
+| Output contains | Meaning | Next |
+|---|---|---|
+| `REPAIRED 3788334043 -> … bytes` and `done, N key(s) repaired` | The oversized response was stripped. | Step 4 |
+| `lastABCIResponseKey COMPLETED interrupted write: now height 12549000, app_hash <HASH>` | Your node crashed between CometBFT's two writes. | **Check the hash below**, then step 4 |
+| Only `ok, … bytes` lines and `done, 0 key(s) repaired` | Your `state.db` was not affected, for example a node restored from a pre-upgrade snapshot. | Step 4 |
+| `skipped, db_backend is not goleveldb` | Not applicable to pebbledb / rocksdb. | Step 4. If it still does not start, report it. |
+| a panic, an error, or `Killed` (check `dmesg \| tail`) | The repair did not complete. `Killed` usually means not enough RAM. | **Stop and report it** with the output. |
+
+**Hash check, only if you saw `COMPLETED interrupted write`:** `<HASH>` must equal the app hash of the upgrade block:
+
+```
+7EC4D38C039DCF9D47E8BFFB79845A770BC6481F377E80D7BABA5DF0EEF7A3BB
+```
+
+It also appears in your own log as `ABCI Handshake App Info hash=… height=12549000` from an earlier start attempt. **If it differs, do not start. Report it.**
+
+### 4. Install
+
+**Cosmovisor:** the binary replaces the one in the `v5` upgrade directory. The directory name is the plan name, `v5`.
+
+```bash
+cp ~/.zigchain/cosmovisor/upgrades/v5/bin/zigchaind ~/zigchaind-v5.1.1.bak
+install -m 0755 ./zigchaind ~/.zigchain/cosmovisor/upgrades/v5/bin/zigchaind
+readlink -f ~/.zigchain/cosmovisor/current    # …/cosmovisor/upgrades/v5
+~/.zigchain/cosmovisor/current/bin/zigchaind version    # v5.1.2
+```
+
+**Without cosmovisor:**
+
+```bash
+sudo install -m 0755 ./zigchaind $(which zigchaind)
+zigchaind version                             # v5.1.2
+```
+
+### 5. Start and watch
+
+```bash
+sudo systemctl start zigchaind
+journalctl -u zigchaind -f -o cat
+```
+
+The automatic repair runs first and finds nothing left to do. Then you see one of these:
+
+- **`Replay last block using mock app`** → `Completed ABCI Handshake`. Your app had already committed the upgrade block. This takes seconds.
+- **`Replay last block using real app`** → `applying upgrade "v5"` → about 5 to 10 minutes of silence → `Upgrade v5 complete` → `Completed ABCI Handshake`. Your app had not committed it, so the upgrade runs again with the fixed handler. **Do not restart during the silence.** The `v5: stubbed gov proposal … proposal_id=3` warning is expected.
+- **`Completed ABCI Handshake`** directly. Your node was already in sync.
+
+After the handshake, the node waits at 12,549,001 until more than two-thirds of the voting power is up. Prevote timeouts and missing peers are normal until then.
+
+### 6. Verify
+
+```bash
+curl -s localhost:26657/status | jq '.result.sync_info | {latest_block_height, latest_app_hash, catching_up}'
+# before the chain resumes: height 12549000, app hash 7EC4D38C…
+
+# once blocks advance past 12549000:
+zigchaind query staking params -o json | jq -r .params.bond_denom    # azig
+zigchaind query wasm libwasmvm-version                               # 2.3.5
+```
+
+Confirm your validator signs: its address shows `BLOCK_ID_FLAG_COMMIT` in the next blocks' `last_commit`.
+
+### If the handshake fails with `expected height 12549000 but last stored abci responses was at height 12548999`
+
+The repair found no stored response to complete the interrupted write with. Now that `state.db` opens, roll the app back one height and let the upgrade re-run:
+
+```bash
+sudo systemctl stop zigchaind
+zigchaind rollback --home ~/.zigchain         # cosmovisor: ~/.zigchain/cosmovisor/current/bin/zigchaind
+sudo systemctl start zigchaind                # expect "Replay last block using real app"
+```
+
+Report it as well, so the team knows this case happened.
+
+### Undoing the procedure
+
+Stop the node, then restore `~/state.db.bak-12549000` over `data/state.db`. **Keep your current `priv_validator_state.json`.** Report what you saw. Do not start `v5.1.1` on the restored data.
 
 ## Mainnet — governance upgrade to `v5`
 
