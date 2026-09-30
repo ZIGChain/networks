@@ -114,7 +114,10 @@ The chain resumes once validators with more than two-thirds of the voting power 
 - **Free RAM: about 18 GB.** The repair holds the 3.79 GB value several times while goleveldb replays its journal. Measured peak: 17.9 GiB. Add temporary swap if the machine has less.
 - **Free disk: about 10 GB**, plus room for the backups below.
 - **Stop the node** so systemd or cosmovisor does not restart it in a loop.
-- **Do not** start `v5.1.0` or `v5.1.1` again, use `--unsafe-skip-upgrades`, delete `data/`, or restore an old `priv_validator_state.json`.
+- **Do not** start `v5.1.0` or `v5.1.1` again.
+- **Do not** use `--unsafe-skip-upgrades`.
+- **Do not** delete your `data` folder.
+- **Do not** use the `zigchaind rollback` feature.
 
 The steps assume the home is `~/.zigchain` and the service is `zigchaind`. Adjust if yours differ.
 
