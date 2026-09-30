@@ -134,18 +134,28 @@ free -g; df -h ~/.zigchain
 
 ### 2. Download and verify `v5.1.2`
 
-Download the tarball and `SHA256SUMS-v5.1.2.txt` from the [`v5.1.2` table above](#latest--v512), then:
+The files are also listed in the [`v5.1.2` table above](#latest--v512).
 
 ```bash
-sha256sum -c SHA256SUMS-v5.1.2.txt --ignore-missing
-tar xzf zigchaind-v5.1.2-linux-amd64.tar.gz
+mkdir -p ~/v5.1.2 && cd ~/v5.1.2
+curl -LO https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/zigchaind-v5.1.2-linux-amd64.tar.gz
+curl -LO https://github.com/ZIGChain/networks/raw/main/binaries/v5.1.2/SHA256SUMS-v5.1.2.txt
+sha256sum -c SHA256SUMS-v5.1.2.txt --ignore-missing   # zigchaind-v5.1.2-linux-amd64.tar.gz: OK
+
+tar xzf zigchaind-v5.1.2-linux-amd64.tar.gz   # extracts into zigchaind-v5.1.2-linux-amd64/
+cd zigchaind-v5.1.2-linux-amd64
 ./zigchaind version                           # v5.1.2
 ```
 
+Steps 3 and 4 run `./zigchaind` from this folder. In a new shell, `cd ~/v5.1.2/zigchaind-v5.1.2-linux-amd64` first.
+
 ### 3. Run the repair and read its output
+
+Run it as the user that runs the node, not with `sudo`. The repair writes new files into `state.db`, and files owned by another user can stop the node from opening it.
 
 ```bash
 ./zigchaind repair-state-db --home ~/.zigchain
+# node runs as another user:  sudo -u <node-user> ./zigchaind repair-state-db --home <node-home>
 ```
 
 It takes a minute or two on an affected node. Every line starts with `state.db repair:`. Find your case:
@@ -177,11 +187,12 @@ readlink -f ~/.zigchain/cosmovisor/current    # …/cosmovisor/upgrades/v5
 ~/.zigchain/cosmovisor/current/bin/zigchaind version    # v5.1.2
 ```
 
-**Without cosmovisor:**
+**Without cosmovisor:** replace the binary your service runs. `systemctl cat zigchaind | grep ExecStart` shows its path if it is not the one on your `PATH`.
 
 ```bash
-sudo install -m 0755 ./zigchaind $(which zigchaind)
-zigchaind version                             # v5.1.2
+BIN=$(which zigchaind)                        # or the path from ExecStart
+sudo install -m 0755 ./zigchaind "$BIN"
+"$BIN" version                                # v5.1.2
 ```
 
 ### 5. Start and watch
@@ -205,7 +216,8 @@ After the handshake, the node waits at 12,549,001 until more than two-thirds of 
 curl -s localhost:26657/status | jq '.result.sync_info | {latest_block_height, latest_app_hash, catching_up}'
 # before the chain resumes: height 12549000, app hash 7EC4D38C…
 
-# once blocks advance past 12549000:
+# once blocks advance past 12549000 (cosmovisor: use ~/.zigchain/cosmovisor/current/bin/zigchaind):
+zigchaind version                                                    # v5.1.2
 zigchaind query staking params -o json | jq -r .params.bond_denom    # azig
 zigchaind query wasm libwasmvm-version                               # 2.3.5
 ```
@@ -251,7 +263,7 @@ Snapshot your `data/` directory before the height.
 
 ### At the upgrade height
 
-Your node logs `UPGRADE "v5" NEEDED at height: 12549000` and stops. Cosmovisor swaps and restarts by itself. Manually:
+Your node logs `UPGRADE "v5" NEEDED at height: 12549000` and stops. Cosmovisor swaps and restarts by itself. Manually, from the extracted `zigchaind-v5.1.0-linux-amd64/` folder:
 
 ```bash
 sudo systemctl stop zigchaind
@@ -289,11 +301,12 @@ No governance proposal is submitted for this one. Every operator stops at an agr
 sha256sum zigchaind-v5.1.0-linux-amd64.tar.gz
 # compare against the table above
 
-tar xzf zigchaind-v5.1.0-linux-amd64.tar.gz
+tar xzf zigchaind-v5.1.0-linux-amd64.tar.gz   # extracts into zigchaind-v5.1.0-linux-amd64/
+cd zigchaind-v5.1.0-linux-amd64
 ./zigchaind version                   # expect: v5.1.0
 ```
 
-Keep it staged alongside your current binary. Do not replace anything yet.
+Keep it staged alongside your current binary. Do not replace anything yet. The `./zigchaind` commands below run from this folder.
 
 ### 2. Set your halt height
 
