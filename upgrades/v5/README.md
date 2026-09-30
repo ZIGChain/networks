@@ -112,9 +112,18 @@ It takes a minute or two on an affected node. Every line starts with `state.db r
 |---|---|---|
 | `REPAIRED 3788334043 -> … bytes` and `done, N key(s) repaired` | The oversized response was stripped. | Step 4 |
 | `lastABCIResponseKey COMPLETED interrupted write: now height 12549000, app_hash <HASH>` | Your node crashed between CometBFT's two writes. | **Check the hash below**, then step 4 |
-| Only `ok, … bytes` lines and `done, 0 key(s) repaired` | Your `state.db` was not affected, for example a node restored from a pre-upgrade snapshot. | Step 4 |
+| Only `ok, … bytes` or `absent` lines and `done, 0 key(s) repaired` | Nothing to repair. This is fine, see the note below. | Step 4 |
 | `skipped, db_backend is not goleveldb` | Not applicable to pebbledb / rocksdb. | Step 4. If it still does not start, report it. |
 | a panic, an error, or `Killed` (check `dmesg \| tail`) | The repair did not complete. `Killed` usually means not enough RAM. | **Stop and report it** with the output. |
+
+**`0 key(s) repaired` is fine. Carry on with step 4.** It means your `state.db` holds no oversized response, so there was nothing to strip. That happens when:
+
+- the node never saved the oversized upgrade block result, for example because it was restored from a pre-upgrade snapshot or stopped before the upgrade block was saved, or
+- `v5.1.2` already started once on this node and repaired it automatically, as `zigchaind start` runs the same repair first.
+
+You still need `v5.1.2`. If your node has not committed the upgrade block, it runs the upgrade again on start, and only the fixed `v5.1.2` handler keeps the result small enough to save. `v5.1.0` or `v5.1.1` would crash the same way again.
+
+Check the `state.db repair: checking <path>` line first: it must be your node's real `data/state.db`. If it is not, run the repair again with the right `--home`, as the node's user.
 
 **Hash check, only if you saw `COMPLETED interrupted write`:** `<HASH>` must equal the app hash of the upgrade block:
 
