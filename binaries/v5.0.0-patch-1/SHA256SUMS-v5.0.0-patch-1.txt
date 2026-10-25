@@ -1,0 +1,6 @@
+599605adaef805566c874dcf790375e499de368fd540da1bfcf0c9f0ce9c93c3  zigchaind-v5.0.0-patch-1-darwin-amd64
+3b9dfc2cfd290fe2cf8e7a2f6ba6cff5f93f9a2f1fb1c2565ca27b17803e9b28  zigchaind-v5.0.0-patch-1-darwin-amd64.tar.gz
+c3293ae0264783bc525bef91c8a34c0a65334f62b12ae1496178e9f02afdedda  zigchaind-v5.0.0-patch-1-darwin-arm64
+408972867f66ae17fcf6730c5e5c96432f2175a96a36d991b6e0f26d7fa567ef  zigchaind-v5.0.0-patch-1-darwin-arm64.tar.gz
+18f97de1b607f7984d4a1cc874fe0ddb38a369ab717c69d512206c181d23ad23  zigchaind-v5.0.0-patch-1-linux-amd64
+002c1edb1db0f32ac16bc3faaa96438b1720f9330b2fca438108f19cd49586ee  zigchaind-v5.0.0-patch-1-linux-amd64.tar.gz
