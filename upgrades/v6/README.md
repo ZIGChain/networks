@@ -9,9 +9,9 @@ ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes 
 | Mechanism | governance software-upgrade | governance software-upgrade |
 | Upgrade name | `v6` | `v6` |
 | Binary version | `v6.0.0` | `v6.0.0` |
-| Upgrade height | not scheduled yet | not scheduled yet |
+| Upgrade height | **8,423,210** (~Tue 2026-10-27 09:30 UTC) | not scheduled yet |
 | Proposal | not submitted yet | not submitted yet |
-| Status | binaries published, not scheduled | binaries published, not scheduled |
+| Status | height agreed, proposal not submitted yet | binaries published, not scheduled |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time. The **height is authoritative**; any time given next to it is an estimate from the current block rate and will drift.
 
@@ -24,6 +24,14 @@ ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes 
 | `darwin-arm64` | [zigchaind-v6.0.0-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-arm64.tar.gz) | `bf137e481dfc66046cc3bb947ff50670c32c682d678ee2d254936b754ea04ae3` |
 
 Full checksums: [`SHA256SUMS-v6.0.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/SHA256SUMS-v6.0.0.txt). Built from commit `d76cf899f05d0bd359b8aade0d0c6d6d9d39917f`, source tree `79a6301c76e98268a00d4c2bdb9f96bdfb808dc8`, with go1.26.9. `zigchaind version --long` reports `v6.0.0`.
+
+## app.toml
+
+**No change is needed to upgrade.** `v6.0.0` starts on a v5 `app.toml` as it is: the EVM chain ID is derived from the Cosmos chain ID (`2061` on `zig-test-2`, `944` on `zigchain-1`), so a missing `[evm]` section is fine. What behaves differently:
+
+- `minimum-gas-prices`: keep it set, the node still refuses to start when it is empty. It no longer decides which transactions you accept, the on-chain base fee from `x/feemarket` does.
+- `query-gas-limit`: `0` now means a cap of 50,000,000 gas per query instead of unbounded.
+- JSON-RPC: off by default, and only needed on nodes that serve Ethereum tooling. A v5 `app.toml` has no `[json-rpc]` section, so generate the v6 template with `zigchaind init tmp --home /tmp/zig-v6` and copy its `[evm]`, `[evm.mempool]`, `[json-rpc]` and `[tls]` sections over. Then set `[json-rpc] enable = true` and keep `[grpc] enable = true`, because `eth_call`, `eth_estimateGas` and `debug_trace*` are served over gRPC.
 
 ## Upgrade through governance
 
