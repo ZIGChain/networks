@@ -23,7 +23,7 @@ ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes 
 | `darwin-amd64` | [zigchaind-v6.0.0-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-amd64.tar.gz) | `e37dc2a8b12a2d2d226bb766651b0342bc71d6cccd424bb13b10f22240951b8f` |
 | `darwin-arm64` | [zigchaind-v6.0.0-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-arm64.tar.gz) | `7233dd163f6f5e04aaecc3b63091b96babb03d265ea432fa140579ccdf6842d1` |
 
-Full checksums: [`SHA256SUMS-v6.0.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/SHA256SUMS-v6.0.0.txt). Built from commit `81af3b281338487d1c6e17993754f45f9fd974db`, source tree `9a84bbe48256b62d365ccc5776ef8387993abe91`, with go1.26.9. `zigchaind version --long` reports `v6.0.0`.
+Full checksums: [`SHA256SUMS-v6.0.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/SHA256SUMS-v6.0.0.txt). Built from commit `81af3b281338487d1c6e17993754f45f9fd974db`, source tree `9a84bbe48256b62d365ccc5776ef8387993abe91`, with go1.26.9. `zigchaind version --long` reports `v6.0.0`. Its dependency list shows `github.com/cosmos/evm v0.6.3` replaced by `v0.6.4-rc4`: the replacement is the cosmos/evm security release this binary is built with, so seeing `v0.6.3` there is expected.
 
 ## app.toml
 
@@ -73,6 +73,7 @@ The first `v6.0.0` block runs the `v6` upgrade handler, so it can take longer th
 ```bash
 zigchaind version                                      # v6.0.0
 zigchaind query wasm libwasmvm-version                 # 2.3.5
+zigchaind version --long | grep cosmos/evm             # v0.6.3 => ... v0.6.4-rc4
 curl -s localhost:26657/status | jq '.result.sync_info.latest_block_height'
 ```
 
