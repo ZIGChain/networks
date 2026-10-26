@@ -9,9 +9,9 @@ ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes 
 | Mechanism | governance software-upgrade | governance software-upgrade |
 | Upgrade name | `v6` | `v6` |
 | Binary version | `v6.0.0` | `v6.0.0` |
-| Upgrade height | **8,423,210** (~Tue 2026-10-27 09:30 UTC) | not scheduled yet |
-| Proposal | not submitted yet | not submitted yet |
-| Status | height agreed, proposal not submitted yet | binaries published, not scheduled |
+| Upgrade height | **[8,423,210](https://explorer.nodestake.org/zigchain-testnet/block/8423210)** (~Tue 2026-10-27 09:30 UTC) | not scheduled yet |
+| Proposal | [#122](https://explorer.nodestake.org/zigchain-testnet/gov/122), passed Mon 2026-10-26 21:18 UTC | not submitted yet |
+| Status | upgrade scheduled at 8,423,210 | binaries published, not scheduled |
 
 > Heights and proposal links are filled in as each stage is reached — never guessed ahead of time. The **height is authoritative**; any time given next to it is an estimate from the current block rate and will drift.
 
