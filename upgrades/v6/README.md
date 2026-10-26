@@ -1,6 +1,6 @@
 # ZIGChain v6 Upgrade
 
-ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes is in the [release notes](https://github.com/ZIGChain/zigchain/releases/tag/v6.0.0).
+ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes is in the [release notes](https://github.com/ZIGChain/networks/releases/tag/v6.0.0).
 
 ## Coordinates
 
@@ -19,11 +19,11 @@ ZIGChain `v6.0.0` (Whirlpool) through the `v6` governance upgrade. What changes 
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
-| `linux-amd64` | [zigchaind-v6.0.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-linux-amd64.tar.gz) | `cfe500177a136ac2eb9e2c155d328041b13c58cf9629a53bd346cc172f59e2cd` |
-| `darwin-amd64` | [zigchaind-v6.0.0-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-amd64.tar.gz) | `7dba8f0a5aec2969e02b27323b0eb5ec6c168d6d236b5007aef60d1d348d6671` |
-| `darwin-arm64` | [zigchaind-v6.0.0-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-arm64.tar.gz) | `bf137e481dfc66046cc3bb947ff50670c32c682d678ee2d254936b754ea04ae3` |
+| `linux-amd64` | [zigchaind-v6.0.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-linux-amd64.tar.gz) | `4373e53d7a05ff0f50037a1cd83801d5f0d972207e7ff50f3cc5d8ded62867a4` |
+| `darwin-amd64` | [zigchaind-v6.0.0-darwin-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-amd64.tar.gz) | `e37dc2a8b12a2d2d226bb766651b0342bc71d6cccd424bb13b10f22240951b8f` |
+| `darwin-arm64` | [zigchaind-v6.0.0-darwin-arm64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/zigchaind-v6.0.0-darwin-arm64.tar.gz) | `7233dd163f6f5e04aaecc3b63091b96babb03d265ea432fa140579ccdf6842d1` |
 
-Full checksums: [`SHA256SUMS-v6.0.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/SHA256SUMS-v6.0.0.txt). Built from commit `d76cf899f05d0bd359b8aade0d0c6d6d9d39917f`, source tree `79a6301c76e98268a00d4c2bdb9f96bdfb808dc8`, with go1.26.9. `zigchaind version --long` reports `v6.0.0`.
+Full checksums: [`SHA256SUMS-v6.0.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.0.0/SHA256SUMS-v6.0.0.txt). Built from commit `81af3b281338487d1c6e17993754f45f9fd974db`, source tree `9a84bbe48256b62d365ccc5776ef8387993abe91`, with go1.26.9. `zigchaind version --long` reports `v6.0.0`.
 
 ## app.toml
 
