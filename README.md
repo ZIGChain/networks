@@ -7,7 +7,7 @@ At any given time, there will be multiple active networks:
 | Network     | Status | Version (Binary Version) | Description                                                       |
 |-------------|--------|--------------------------|-------------------------------------------------------------------|
 | **mainnet** | ✔️     | v5 (v5.1.2)               | The production-ready ZIGChain mainnet.                            |
-| **testnet** | ✔️     | v5 (v5.1.1)               | The public ZIGChain testnet for developers and ecosystem testing. |
+| **testnet** | ✔️     | v6 (v6.0.0)               | The public ZIGChain testnet for developers and ecosystem testing. |
 
 Each network has a dedicated directory containing essential configuration details. These directories include:
 
@@ -19,6 +19,7 @@ Each network has a dedicated directory containing essential configuration detail
 | `seed-nodes.txt`   | A list of available seed node addresses.             |
 | `rpc-nodes.txt`    | A list of available RPC node addresses.              |
 | `api-nodes.txt`    | A list of API (LCD) node addresses.                  |
+| `evm-rpc-nodes.txt`| A list of EVM JSON-RPC node addresses (testnet).     |
 
 
 ## Usage
