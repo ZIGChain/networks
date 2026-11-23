@@ -9,7 +9,7 @@ ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships
 | Mechanism | governance software-upgrade | governance software-upgrade |
 | Upgrade name | `v6.1` | `v6.1` |
 | Binary version | `v6.1.0` | `v6.1.0` |
-| Upgrade height | **[8,870,100](https://explorer.nodestake.org/zigchain-testnet/block/8870100)** (Wed 2026-11-25 ~09:30 UTC) | **[14,110,200](https://explorer.nodestake.org/zigchain/block/14110200)** (Fri 2026-11-27 ~09:30 UTC) |
+| Upgrade height | **[8,870,100](https://explorer.nodestake.org/zigchain-testnet/block/8870100)** (Wed 2026-11-25 ~09:30 UTC) | **[14,110,500](https://explorer.nodestake.org/zigchain/block/14110500)** (Fri 2026-11-27 ~09:30 UTC) |
 | Proposal | pending | pending |
 | Status | scheduled | scheduled |
 
@@ -65,7 +65,11 @@ Snapshot your `data/` directory before the height.
 
 ### At the upgrade height
 
-Your node logs `UPGRADE "v6.1" NEEDED at height: <height>` and stops. Cosmovisor swaps the binary and restarts it. Manually, from the extracted `zigchaind-v6.1.0-linux-amd64/` folder:
+Your node logs `UPGRADE "v6.1" NEEDED at height: <height>` and stops. Cosmovisor swaps the binary and restarts it.
+
+`v6.0.0` can hang after that line on `Shutting down EVM mempool` instead of exiting. Cosmovisor kills the old process itself, after `DAEMON_SHUTDOWN_GRACE` if you set one. On a manual setup, `systemctl stop` waits for the unit's stop timeout; if the process is still there, `kill -9` it. The halt happens before the upgrade block is committed, so this is safe.
+
+Manually, from the extracted `zigchaind-v6.1.0-linux-amd64/` folder:
 
 ```bash
 sudo systemctl stop zigchaind
