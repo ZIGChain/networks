@@ -1,6 +1,6 @@
 # ZIGChain v6.1 Upgrade
 
-ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships the Cosmos Labs December security patches for `cosmos/evm`, `wasmd`, `wasmvm`, the Cosmos SDK and CometBFT, and moves the EVM from the Prague to the Osaka hard fork. Details of the security fixes follow once the upstream advisories are published.
+ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships the Cosmos Labs December security patches for `cosmos/evm`, `wasmd`, `wasmvm`, the Cosmos SDK and CometBFT. Details of the security fixes follow once the upstream advisories are published.
 
 ## Coordinates
 
@@ -31,11 +31,10 @@ This release ships **Linux binaries only**. macOS binaries return once the patch
 
 ## What changes for users
 
-The EVM moves from Prague to Osaka. This is part of the `v6.1` upgrade and needs no action from node operators.
+These changes are part of the `v6.1` upgrade and need no action from node operators. The full list of EVM changes follows with the security details.
 
-- The p256 precompile at `0x0000000000000000000000000000000000000100` is now go-ethereum's `P256VERIFY` (EIP-7951). It returns the same results and costs 6,900 gas per call.
-- An EVM transaction may ask for at most **16,777,216 gas** (EIP-7825). The EVM mempool rejects a larger one, and `eth_estimateGas` stops at that value. Tooling that sends EVM transactions with a higher gas limit must lower it.
-- `MODEXP` takes at most 1,024 bytes per input and is priced higher (EIP-7823, EIP-7883).
+- An EVM transaction may ask for at most **16,777,216 gas**. The EVM mempool rejects a larger one, and `eth_estimateGas` stops at that value. Tooling that sends EVM transactions with a higher gas limit must lower it.
+- Some EVM precompiles change their gas cost, so a contract call can cost slightly more or less gas than on `v6.0.0`.
 
 ### RPC operator nodes
 
