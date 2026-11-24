@@ -1,6 +1,6 @@
 # ZIGChain v6.1 Upgrade
 
-ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships the Cosmos Labs December security patches for `cosmos/evm`, `wasmd` and `wasmvm`, and moves the EVM from the Prague to the Osaka hard fork. Details of the security fixes follow once the upstream advisories are published.
+ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships the Cosmos Labs December security patches for `cosmos/evm`, `wasmd`, `wasmvm`, the Cosmos SDK and CometBFT, and moves the EVM from the Prague to the Osaka hard fork. Details of the security fixes follow once the upstream advisories are published.
 
 ## Coordinates
 
@@ -9,7 +9,7 @@ ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships
 | Mechanism | governance software-upgrade | governance software-upgrade |
 | Upgrade name | `v6.1` | `v6.1` |
 | Binary version | `v6.1.0` | `v6.1.0` |
-| Upgrade height | **[8,870,100](https://explorer.nodestake.org/zigchain-testnet/block/8870100)** (Wed 2026-11-25 ~09:30 UTC) | **[14,110,500](https://explorer.nodestake.org/zigchain/block/14110500)** (Fri 2026-11-27 ~09:30 UTC) |
+| Upgrade height | **[8,885,500](https://explorer.nodestake.org/zigchain-testnet/block/8885500)** (Thu 2026-11-26 ~09:30 UTC) | **[14,110,500](https://explorer.nodestake.org/zigchain/block/14110500)** (Fri 2026-11-27 ~09:30 UTC) |
 | Proposal | pending | pending |
 | Status | scheduled | scheduled |
 
@@ -19,9 +19,9 @@ ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships
 
 | Platform | Download | SHA-256 |
 |----------|----------|---------|
-| `linux-amd64` | [zigchaind-v6.1.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.1.0/zigchaind-v6.1.0-linux-amd64.tar.gz) | `c980cf994247f812ea4763e334f3cd7e547fe6278d42989e58ba65766535e880` |
+| `linux-amd64` | [zigchaind-v6.1.0-linux-amd64.tar.gz](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.1.0/zigchaind-v6.1.0-linux-amd64.tar.gz) | `13e4d22bac24319d1bd8a80c23db309788381d0dafae29718df4bb2b0850a5d3` |
 
-Full checksums: [`SHA256SUMS-v6.1.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.1.0/SHA256SUMS-v6.1.0.txt). Built from commit `4e9b4484abb1290114c5c373df1171dbf2b0a3cc` with go1.26.10. `zigchaind version --long` reports `v6.1.0`. Its dependency list shows `cosmos/evm`, `wasmd` and `wasmvm` replaced by the Cosmos Labs security releases this binary is built with, so seeing replacements there is expected.
+Full checksums: [`SHA256SUMS-v6.1.0.txt`](https://github.com/ZIGChain/networks/raw/refs/heads/main/binaries/v6.1.0/SHA256SUMS-v6.1.0.txt). Built from commit `cb9c23a642f4f5347c5ef569d996cd7e5d8b887b` with go1.26.10. `zigchaind version --long` reports `v6.1.0`. Its dependency list shows `cosmos/evm`, `wasmd`, `wasmvm`, `cosmos-sdk` and `cometbft` replaced by the Cosmos Labs security releases this binary is built with, so seeing replacements there is expected.
 
 This release ships **Linux binaries only**. macOS binaries return once the patched `wasmvm` is publicly tagged. The source is not public yet, so `v6.1.0` cannot be built from source until then.
 
@@ -84,9 +84,12 @@ The `v6.1` upgrade handler has no state migration, so the first `v6.1.0` block i
 
 ```bash
 zigchaind version                                      # v6.1.0
+zigchaind version --long | grep '^commit'              # commit: cb9c23a642f4f5347c5ef569d996cd7e5d8b887b
 zigchaind query wasm libwasmvm-version                 # 2.3.7-rc.4
 curl -s localhost:26657/status | jq '.result.sync_info.latest_block_height'
 ```
+
+Check the commit, not the CometBFT version: the patched CometBFT still reports itself as `0.38.26`.
 
 Confirm your node is signing and blocks are advancing.
 
