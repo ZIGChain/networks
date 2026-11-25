@@ -1,0 +1,2 @@
+3b4baaf593fcb1f2db714e733d6508a197cdb47e6eb02b330683ef144f69abf8  zigchaind-v6.1.0-linux-amd64
+13e4d22bac24319d1bd8a80c23db309788381d0dafae29718df4bb2b0850a5d3  zigchaind-v6.1.0-linux-amd64.tar.gz
