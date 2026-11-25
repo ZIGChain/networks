@@ -9,7 +9,7 @@ ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships
 | Mechanism | governance software-upgrade | governance software-upgrade |
 | Upgrade name | `v6.1` | `v6.1` |
 | Binary version | `v6.1.0` | `v6.1.0` |
-| Upgrade height | **[8,885,500](https://explorer.nodestake.org/zigchain-testnet/block/8885500)** (Thu 2026-11-26 ~09:30 UTC) | **[14,110,500](https://explorer.nodestake.org/zigchain/block/14110500)** (Fri 2026-11-27 ~09:30 UTC) |
+| Upgrade height | **[8,885,500](https://explorer.nodestake.org/zigchain-testnet/block/8885500)** (Thu 2026-11-26 ~09:30 UTC) | **[14,110,000](https://explorer.nodestake.org/zigchain/block/14110000)** (Fri 2026-11-27 ~09:30 UTC) |
 | Proposal | pending | pending |
 | Status | scheduled | scheduled |
 
