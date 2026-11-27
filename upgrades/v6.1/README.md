@@ -10,8 +10,8 @@ ZIGChain `v6.1.0` through the `v6.1` governance upgrade, from `v6.0.0`. It ships
 | Upgrade name | `v6.1` | `v6.1` |
 | Binary version | `v6.1.0` | `v6.1.0` |
 | Upgrade height | **[8,885,500](https://explorer.nodestake.org/zigchain-testnet/block/8885500)** (Thu 2026-11-26 ~09:30 UTC) | **[14,110,000](https://explorer.nodestake.org/zigchain/block/14110000)** (Fri 2026-11-27 ~09:30 UTC) |
-| Proposal | pending | pending |
-| Status | scheduled | scheduled |
+| Proposal | [#130](https://explorer.nodestake.org/zigchain-testnet/gov/130), passed Wed 2026-11-25 14:04 UTC | [#48](https://explorer.nodestake.org/zigchain/gov/48) (expedited), passed Thu 2026-11-26 15:10 UTC |
+| Status | upgraded, running `v6.1.0` since 8,885,500 | upgraded, running `v6.1.0` since 14,110,000 |
 
 > Heights and proposal links are filled in as each stage is reached, never guessed ahead of time. The **height is authoritative**; any time given next to it is an estimate from the current block rate and will drift.
 
